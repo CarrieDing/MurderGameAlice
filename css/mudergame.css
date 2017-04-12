@@ -1,162 +1,155 @@
-.wrap{
-    width: 100vmin;
+
+html{
     height: 100%;
-    margin: 0 auto;
-    position: absolute;
-    left:0;
-    right: 0;
-    top:0;
-    bottom:0;
+    overflow-x:hidden;
+}
+body{
+    /*width: 100%;浏览器会默认宽度为100%*/
+    height: 100%;
+    margin: 0;
     background-color: #eff0f1;
-    border: none;
-    letter-spacing: 8px;
 }
-.banner{
-    width: 100%;
-    height: 8%;
-    margin-bottom: 1%;
+
+.header{
+    height: 10%;
     background-color:#6dd2e9 ;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
 }
-.borderStyle{
-    border: 1px solid #9d9d9d;
-    background-color: white;
+
+.nav{
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
 }
 .lastgame{
-    margin-left: 1%;
-    width: 98%;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    margin:1rem 1%;
     height: 10%;
-    text-align: center;
-    margin-bottom: 2%;
-
+    font-size: 2rem;
+    border:1px solid #9d9d9d;
+    background-color: white;
+    font-weight: bold;
+    color:#adadad;
+    letter-spacing: 4px;
 }
-.lstgamename{
-    width: 80%;
+
+.gamelist{
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    height: calc(80% - 2rem);
+}
+.parent{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    width:98%;
     height: 100%;
-    margin-left:10%;
-    float: left;
-    color: #5e5e5e;
-    font-size: 3vmin;
-    background-color: transparent;
+    border:1px solid #9d9d9d;
+    background-color: white;
+    -webkit-box-pack: center;  /*实现容器内容垂直居中*/
+    -webkit-box-align: center; /* 实现容器内的内容水平居中*/
+    -moz-box-pack: center;
+    letter-spacing: 6px;
+}
+.gameTitle{
+    -webkit-box-flex:1;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #f8be5d;
+    border: 1px solid #f8be5d;
+    border-color:transparent transparent #f8be5d transparent;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    font-size: 2.5rem;
+}
+
+.versionname{
+    font-size: 2.5rem;
+    -webkit-box-flex:3;
+    width: 80%;
+    background-color:#6dd2e9 ;
+    color: #FFFFFF;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
     border: none;
-    /*控制字之间的距离*/
-    letter-spacing: 8px;
-    /*以下四行保证这个div中的文字上下左右居中*/
+}
+.count{
+    -webkit-box-flex:1;
+    width: 80%;
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
     -webkit-box-align: center;
 }
 
-.gamelist{
-    height: 78%;
-    width: 98%;
-    margin-left: 1%;
-    margin-bottom: 1%;
-    float: left;
+.scrollpoint{
+    display: -webkit-box;
+    width: 64px;
+    height: 1rem;
 }
-
-.angelright{
-    border:5vmin solid transparent;
-    /*border:2rem solid transparent;*/
-    border-left-color:#f8be5d;
-    width: 0;
-    height: 0;
-    width: 10%;
-    float: left;
-    margin-left: 3%;
-    /*margin-top: 10%;*/
-    z-index: auto;
-    position: relative;
-    top:55%;
-    left:81%;
+.circle{
+    -webkit-box-flex: 1;
+    background-color: #adadad;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+.defaultSelected{
+    background-color:#6dd2e9 ;
 }
 .angelleft {
-    width: 10%;
-    margin-left: -2%;
-    border: 5vmin solid transparent;
+    position: absolute;
+    border: 1.2rem solid transparent;
     border-right-color: #f8be5d;
     width: 0;
     height: 0;
     float: left;
     z-index: auto;
-    position: relative;
-  top:55%
+    top:60%;
+    left:0;
 }
-.gameTitle{
-    float: left;
-    height: 10%;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    color: #f8be5d;
-    text-indent:3%;
-    font-size: 4vmin;
-    border: .2vmin solid #f8be5d;
-    border-color:transparent transparent #f8be5d transparent;
-margin-bottom: 1%;
-    display: -webkit-box;
-    -webkit-box-orient: horizontal;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+.angelright{
+    position: absolute;
+    border:1.2rem solid transparent;
+    border-left-color:#f8be5d;
+    width: 0;
+    height: 0;
+    float: right;
+    z-index: auto;
+    top:60%;
+    right:0;
 }
-.versionshow{
-    height: 28%;
-    margin-left: 10%;
-    width: 80%;
-    float: left;
-    text-align: center;
-
-}
-.versionname{
-    height: 80%;
-    /*以下四行保证这个div中的文字上下左右居中*/
-    display: -webkit-box;
-    -webkit-box-orient: horizontal;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    background-color:#6dd2e9 ;
-    /*width: 80%;*/
-    width:100% ;
-    border:none;
-    color: #FFFFFF;
-    font-size: 6vmin;
-    letter-spacing: 8px;
-
-}
-.InfoMessage{
-    background-color: transparent;
-    border: hidden;
-    font-size: 12px;
-    /*height: 20%;*/
-}
-
 .pre{
-
-    position: relative;
+   position: absolute;
+    right:1%;
+    top:15%;
+    width: 12px;
+    height: 12px;
 }
 .pre1 {
     border-width: 12px;
     border-color: transparent transparent transparent #9d9d9d;
-    margin-left: 90%;
-    overflow:hidden;
-margin-top: 6%;
-
-
 }
 .pre2 {
     border-width:  12px;
     border-color: transparent transparent transparent #FFF;
-    margin-left: 90%;
     position: relative;
     top:-24px;
-    left:-7.5px;
-
-    /*left: -1.5vmin;*/
-
+    left:-4px;
 }
 .pre1, .pre2 {
     /*****设置border-style:dashed;使ie6支持border透明*****/
-    border-style: dashed solid dashed dashed;
+    /*border-style: dashed solid dashed dashed;*/
+    border-style: solid solid solid solid;
     /*****设置容器宽高为0*****/
     width: 0;
     height: 0;
@@ -164,20 +157,4 @@ margin-top: 6%;
     line-height: 0;
     font-size: 0;
     overflow: hidden;
-}
-.scrollpoint{
-    height: 5%;
-    width: 100%;
-    margin-left: 44%;
-    float: left;
-    /*margin-top: 2%;*/
-}
-.circle{
-    background-color: #0f0f0f;
-    float: left;
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    margin-left: 1%;
 }
