@@ -1,0 +1,69 @@
+/*不管为哪个元素应用什么颜色，都要同时给它一个背景色，否则，就有可能发生一些意外导致看不到某些文本*/
+body{
+    background-color: #eff0f1;
+}
+.header{
+    color:white;
+    background-color:#6dd2e9 ;
+}
+.childheader{
+    color:white;
+    background-color:#6dd2e9 ;
+}
+.nav{
+    background: white;
+}
+.lastgame{
+    color:#adadad;
+    border-color:#9d9d9d;
+    background-color: white;
+}
+.versions{
+    border-color:#9d9d9d;
+    background-color: white;
+}
+.gameTitle{
+    color: #f8be5d;
+    background-color: white;
+}
+.versionname{
+    color: #FFFFFF;
+    background-color:#6dd2e9 ;
+}
+.circle{
+    background-color: #adadad;
+}
+.defaultSelected{
+    background-color:#6dd2e9 ;
+}
+
+
+/*以下是玩家分配样式*/
+.title{
+    background-color: white;
+}
+.assign{
+    background-color: white;
+}
+.givenname{
+    background-color: white;
+}
+.number{
+    background-color: white;
+}
+.deal{
+    color: white;
+    background-color: #ffa600;
+}
+.content{
+    /*background-color: #6dd2e9;*/
+}
+
+.rolepanel{
+
+    background-color: #6dd2e9;
+}
+.shift{
+    color:white;
+    background-color: #f5e79e;
+}

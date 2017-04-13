@@ -5,13 +5,10 @@
     <!-- viewport用于移动端屏幕的适应以及缩放-->
     <title>玩家配比</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/assignment.css" rel="stylesheet" />
+    <link href="css/basic.css" rel="stylesheet" />
 </head>
 <body>
-<div class="pre">
-    <div class="pre1"></div>
-    <div class="pre2"></div>
-</div>
+
 <div class="header"></div>
 <div class="parent">
 <div class="content">
@@ -26,10 +23,11 @@
     </div>
     <div class="givenname"></div>
     <div class="number">
-        <p>请输入玩家数量<input type="text" required="required" placeholder="8"/> 玩家数量为4-18</p>
+        <p>请输入玩家数量<input type="text" value="8" id="playerCount" required="required" class="playerCount" /> 玩家数量为4-18</p>
     </div>
 </div>
 </div>
-<button class="deal">去发牌</button>
+<button class="deal" id="deal">去发牌</button>
+<script type="text/javascript" src="js/global.js"></script>
 </body>
 </html>
