@@ -95,6 +95,8 @@ function playerChanged() {
     playerInput.onpropertychange=function(){
         OnInputChanged(event);
     };
+    if(playerInput.addEventListener)
+        playerInput.addEventListener('input',OnInputChanged,false);
 }
 function OnInputChanged(event) {
     if(!document.getElementById("players")) return false;
