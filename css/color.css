@@ -4,11 +4,11 @@ body{
 }
 .header{
     color:white;
-    background-color:#6dd2e9 ;
+    background-color:#29bde0 ;
 }
 .childheader{
     color:white;
-    background-color:#6dd2e9 ;
+    background-color:#29bde0 ;
 }
 .nav{
     background: white;
@@ -23,23 +23,23 @@ body{
     background-color: white;
 }
 .gameTitle{
-    color: #f8be5d;
+    color: #fbb435;
     background-color: white;
 }
 .versionname{
     color: #FFFFFF;
-    background-color:#6dd2e9 ;
+    background-color:#29bde0 ;
 }
 .circle{
     background-color: #adadad;
 }
 .defaultSelected{
-    background-color:#6dd2e9 ;
+    background-color:#29bde0 ;
 }
 
 
 /*以下是玩家分配样式*/
-.title{
+.playerAssign{
     background-color: white;
 }
 .assign{
@@ -53,17 +53,33 @@ body{
 }
 .deal{
     color: white;
-    background-color: #ffa600;
+    background-color: #fbb435;
 }
 .content{
-    /*background-color: #6dd2e9;*/
+    /*background-color: #29bde0;*/
 }
 
 .rolepanel{
-
-    background-color: #6dd2e9;
+    background-color: #29bde0;
 }
 .shift{
     color:white;
-    background-color: #f5e79e;
+    background-color: #ffedc5;
+}
+.checkout{
+    color:white;
+    background-color: #fbb435;
+}
+.countRestrict{
+    color:#fbb435;
+    background-color: white;
+}
+.playerCount{
+    color:#fbb435;
+    background-color: #eff0f1;
+}
+.numberplate{
+    border-color:#ffedc5;
+    background-color: white;
+    color:red;
 }

@@ -30,10 +30,9 @@ body{
 }
 
 /*以下是玩家分配样式*/
-.childheader{
-font-size: 2.5rem;
-}
-.title{
+
+.playerAssign{
+    font-size:2rem;
     margin: 1rem 0;
 }
 .assign{
@@ -51,4 +50,30 @@ font-size: 2.5rem;
 .deal{
     margin-left: 1%;
     font-size: 2.5rem;
+}
+.shift{
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+/*以下是翻牌页面样式*/
+.childheader{
+    font-size: 2.5rem;
+}
+.checkout{
+    font-size:3rem;
+    /*margin-bottom: 2%;*/
+}
+.playerCount{
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.numberplate{
+    font-size: 3rem;
+}
+.ghost{
+    font-weight: normal;
+}
+.farm{
+    font-weight: normal;
 }

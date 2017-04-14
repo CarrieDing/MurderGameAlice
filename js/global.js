@@ -35,10 +35,9 @@ function gotoAssignment() {
 }
 
 function createRoles() {
-
-var count=document.getElementById("playerCount").value;
+var count=document.getElementById("players").value;
     if(!checkNumber(count)||count>18||count<4){
-        confirm("请输入正确的玩家数量。");
+        Showbo.Msg.confirm("请输入正确的玩家数量。");
     }else{
         var arr=[count];
         if(count>=4&&count<6){
@@ -82,12 +81,54 @@ var count=document.getElementById("playerCount").value;
             }
         }
         // document.write("A=",arr.join(","),"<br />A.shuffle()=",shuffle(arr));
-        alert(shuffle(arr));
+        // alert(shuffle(arr));
         pageJump("role.html");
     }
-
 }
+function playerChanged() {
+    if(!document.getElementById("players")) return false;
+    var playerInput=document.getElementById("players");
 
+    playerInput.oninput=function(){
+        OnInputChanged(event);
+    };
+    playerInput.onpropertychange=function(){
+        OnInputChanged(event);
+    };
+}
+function OnInputChanged(event) {
+    if(!document.getElementById("players")) return false;
+    var count=document.getElementById("players");
+    if(event.target.value=="")
+    {
+        ghost.innerHTML = "杀手  人";
+        farm.innerHTML = "农民  人";
+    }
+    else{
+        count=event.target.value;
+        checkNumber(count)
+        if(count>=4&&count<6){
+            ghost.innerHTML = "杀手 1 人";
+            farm.innerHTML = "农民 " + (count - 1) + " 人";
+        }
+        if(count>=6&&count<9){
+            ghost.innerHTML = "杀手 2 人";
+            farm.innerHTML = "农民 " + (count - 2) + " 人";
+        }
+        if(count>=9&&count<12){
+            ghost.innerHTML = "杀手 3 人";
+            farm.innerHTML = "农民 " + (count - 3) + " 人";
+        }
+        if(count>=12&&count<16){
+            ghost.innerHTML = "杀手 4 人";
+            farm.innerHTML = "农民 " + (count - 4) + " 人";
+        }
+        if(count>=16&&count<19){
+            ghost.innerHTML = "杀手 5 人";
+            farm.innerHTML = "农民 " + (count - 5) + " 人";
+        }
+    }
+}
 function deal() {
     if(!document.getElementById("deal")) return false;
     var deal=document.getElementById("deal");
@@ -96,5 +137,39 @@ function deal() {
     }
 }
 
+
+function returnChooseVersion() {
+    if(!document.getElementById("leftArrow")) return false;
+    var returnChooseVer=document.getElementById("leftArrow");
+    returnChooseVer.onclick=function () {
+        pageJump("chooseVersion.html");
+    }
+}
+
+function returnAssign() {
+    if(!document.getElementById("leftArrow")) return false;
+    var returnAssign=document.getElementById("leftArrow");
+    returnAssign.onclick=function () {
+        pageJump("assignment.html");
+    }
+}
+
+function gameOver() {
+    if(!document.getElementById("returnChooseVersion")) return false;
+    var returnChooseVer=document.getElementById("returnChooseVersion");
+    returnChooseVer.onclick=function () {
+        var result=Showbo.Msg.confirm("结束本轮游戏吗？");
+        if(!document.getElementById("testbyalice")) return false;
+        var confirmbtn=document.getElementById("testbyalice");
+        confirmbtn.onclick=function () {
+            pageJump("chooseVersion.html");
+        }
+
+    }
+}
 addLoadEvent(gotoAssignment);
 addLoadEvent(deal);
+addLoadEvent(playerChanged);
+addLoadEvent(returnAssign);
+addLoadEvent(returnChooseVersion);
+addLoadEvent(gameOver);

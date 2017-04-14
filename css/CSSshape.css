@@ -2,7 +2,7 @@
 .angelleft {
     position: absolute;
     border: 1.2rem solid transparent;
-    border-right-color: #f8be5d;
+    border-right-color: #fbb435;
     width: 0;
     height: 0;
     float: left;
@@ -13,7 +13,7 @@
 .angelright{
     position: absolute;
     border:1.2rem solid transparent;
-    border-left-color:#f8be5d;
+    border-left-color:#fbb435;
     width: 0;
     height: 0;
     float: right;
@@ -50,4 +50,52 @@
     line-height: 0;
     font-size: 0;
     overflow: hidden;
+}
+
+
+
+.leftArrow{
+    position: absolute;
+    /*left:1%;*/
+    top:3%;
+    width: 12px;
+    height: 12px;
+}
+.left1 {
+    border-width: 12px;
+    border-color: transparent white transparent transparent;
+}
+.left2 {
+    border-width:  12px;
+    border-color: transparent #29bde0 transparent transparent;
+    position: relative;
+    top:-24px;
+    left:4px;
+}
+
+.left1, .left2 {
+    /*****设置border-style:dashed;使ie6支持border透明*****/
+    /*border-style: dashed solid dashed dashed;*/
+    border-style: solid solid solid solid;
+    /*****设置容器宽高为0*****/
+    width: 0;
+    height: 0;
+    /*****去掉ie6下默认高度，设置以下属性*****/
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.removeicon {
+    color: white;
+    display: block;
+    position: absolute;
+    top:3%;
+    right:2rem;
+    font-size: 25px;
+}
+
+
+.removeicon:before {
+    content: '\2716';
 }

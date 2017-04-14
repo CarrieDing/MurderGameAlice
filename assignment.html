@@ -8,26 +8,30 @@
     <link href="css/basic.css" rel="stylesheet" />
 </head>
 <body>
-
+<div id="leftArrow" class="leftArrow">
+    <div class="left1"></div>
+    <div class="left2"></div>
+</div>
 <div class="header"></div>
 <div class="parent">
 <div class="content">
-    <p class="title">玩家配比</p>
+    <p class="playerAssign">玩家配比</p>
     <div class="assign">
         <div class="roles">
-            <img src="#" />杀手2人
+            <img src="images/ghost.png" /><label id="ghost" class="ghost">杀手 2 人</label>
         </div>
-        <div  class="roles">
-            <img src="#" />平民6人
+        <div class="roles">
+            <img src="images/farm.png" /><label id="farm" class="farm">平民 6 人</label>
         </div>
     </div>
     <div class="givenname"></div>
     <div class="number">
-        <p>请输入玩家数量<input type="text" value="8" id="playerCount" required="required" class="playerCount" /> 玩家数量为4-18</p>
+        <p><b>请输入玩家数量</b><input type="text" value="8" id="players" required="required" class="playerCount" /> <p class="countRestrict">玩家数量为4-18</p></p>
     </div>
 </div>
 </div>
 <button class="deal" id="deal">去发牌</button>
 <script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/showBo.js"></script>
 </body>
 </html>
