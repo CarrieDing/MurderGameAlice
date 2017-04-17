@@ -12,25 +12,58 @@
     <div class="left1"></div>
     <div class="left2"></div>
 </div>
-<div class="header"></div>
-<div class="parent">
-<div class="content">
-    <p class="playerAssign">玩家配比</p>
-    <div class="assign">
-        <div class="roles">
-            <img src="images/ghost.png" /><label id="ghost" class="ghost">杀手 2 人</label>
+
+<!--<div class="content">-->
+<div class="banner"><img class="help" src="images/help.png"/></div>
+    <div class="Grid">
+        <div class="Grid-cell1">
+            <div class="childCell1">玩<br />家<br />配<br />比</div>
+            <div class="childCell2">
+                <div id="grandChild1" class="grandChild1">
+                    <div id="colm1" class="colm1"></div>
+                    <div id="colm2" class="colm2"></div>
+                </div>
+                <button id="grandChild2" class="grandChild2">
+                    点击设置
+                    <img src="images/pencil.png" />
+                </button>
+            </div>
         </div>
-        <div class="roles">
-            <img src="images/farm.png" /><label id="farm" class="farm">平民 6 人</label>
-        </div>
+        <div class="Grid-cell2">
+            <div class="namelable1">
+                <p class="setname">水民词组</p>
+            </div>
+            <div class="namelable2">
+                <p class="setname">幽灵词组</p>
+            </div>
     </div>
-    <div class="givenname"></div>
-    <div class="number">
-        <p><b>请输入玩家数量</b><input type="text" value="8" id="players" required="required" class="playerCount" /> <p class="countRestrict">玩家数量为4-18</p></p>
+        <div class="Grid-cell3">
+            <div class="number">玩家人数 <input type="text" value="4" id="players" required="required" class="playerCount"/> 人</div>
+            <div class="sliderbar">
+                <div id="substraction" class="item2">
+                    <div class="subtraction">
+                        <div class="row_div"></div>
+
+                    </div>
+                </div>
+                <input id="slidebar" type="range" class="setCount" value="4" max="18" min="4" step="1"/>
+
+                <div id="addition" class="item1">
+                    <div class="addition">
+
+                        <div class="row_div"></div>
+                        <div class="clou_div"></div>
+                    </div>
+
+                </div>
+            </div>
     </div>
+    </div>
+<div class="assign-footer">
+    <button class="deal" id="deal">去发牌</button>
 </div>
-</div>
-<button class="deal" id="deal">去发牌</button>
+<!--</div>-->
+
 <script type="text/javascript" src="js/global.js"></script>
 <script type="text/javascript" src="js/showBo.js"></script>
 </body>

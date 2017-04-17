@@ -1,101 +1,254 @@
-/*以下形状由于特殊性 所有属性就都刚在这一个文件中*/
-.angelleft {
-    position: absolute;
-    border: 1.2rem solid transparent;
-    border-right-color: #fbb435;
-    width: 0;
-    height: 0;
-    float: left;
-    z-index: auto;
-    top:60%;
-    left:0;
-}
-.angelright{
-    position: absolute;
-    border:1.2rem solid transparent;
-    border-left-color:#fbb435;
-    width: 0;
-    height: 0;
-    float: right;
-    z-index: auto;
-    top:60%;
-    right:0;
-}
-.rightArrow{
-    position: absolute;
-    right:1%;
-    top:15%;
-    width: 12px;
-    height: 12px;
-}
-.pre1 {
-    border-width: 12px;
-    border-color: transparent transparent transparent #9d9d9d;
-}
-.pre2 {
-    border-width:  12px;
-    border-color: transparent transparent transparent #FFF;
-    position: relative;
-    top:-24px;
-    left:-4px;
-}
-.pre1, .pre2 {
-    /*****设置border-style:dashed;使ie6支持border透明*****/
-    /*border-style: dashed solid dashed dashed;*/
-    border-style: solid solid solid solid;
-    /*****设置容器宽高为0*****/
-    width: 0;
-    height: 0;
-    /*****去掉ie6下默认高度，设置以下属性*****/
-    line-height: 0;
-    font-size: 0;
-    overflow: hidden;
-}
 
 
+    /*以下形状由于特殊性 所有属性就都刚在这一个文件中*/
+    .angelleft {
+        position: absolute;
+        border: 1.2rem solid transparent;
+        border-right-color: #fbb435;
+        width: 0;
+        height: 0;
+        float: left;
+        z-index: auto;
+        top: 60%;
+        left: 0;
+    }
 
-.leftArrow{
-    position: absolute;
-    /*left:1%;*/
-    top:3%;
-    width: 12px;
-    height: 12px;
-}
-.left1 {
-    border-width: 12px;
-    border-color: transparent white transparent transparent;
-}
-.left2 {
-    border-width:  12px;
-    border-color: transparent #29bde0 transparent transparent;
-    position: relative;
-    top:-24px;
-    left:4px;
-}
+    .angelright {
+        position: absolute;
+        border: 1.2rem solid transparent;
+        border-left-color: #fbb435;
+        width: 0;
+        height: 0;
+        /*float: right;*/
+        z-index: 999;
+        /*bottom:37%;*/
+        right: 2.5%;
+        /*right:1.8%;*/
+        top: 58%;
+        z-index: 999;
+    }
 
-.left1, .left2 {
-    /*****设置border-style:dashed;使ie6支持border透明*****/
-    /*border-style: dashed solid dashed dashed;*/
-    border-style: solid solid solid solid;
-    /*****设置容器宽高为0*****/
-    width: 0;
-    height: 0;
-    /*****去掉ie6下默认高度，设置以下属性*****/
-    line-height: 0;
-    font-size: 0;
-    overflow: hidden;
-}
+    .rightArrow {
+        /*float: right;*/
+        /*line-height: 6rem;*/
+        position: absolute;
+        /*right:6%;*/
+        /*margin-left:30%;*/
+        /*top:11.5%;*/
+        width: 1rem;
+        height: 1rem;
+        /*margin-top: 2%;*/
+        top: 1.5rem;
+        /*left: 0;*/
+        /*bottom: 0;*/
+        right: 1rem;
+        /*margin-top: auto;*/
+        /*margin-bottom: auto;*/
 
-.removeicon {
-    color: white;
-    display: block;
-    position: absolute;
-    top:3%;
-    right:2rem;
-    font-size: 25px;
-}
+    }
+
+    .pre1 {
+        border-width: 1rem;
+        border-color: transparent transparent transparent #e7e7e7;
+    }
+
+    .pre2 {
+        border-width: 1rem;
+        border-color: transparent transparent transparent #FFF;
+        position: relative;
+        top: -24px;
+        left: -4px;
+    }
+
+    .pre1, .pre2 {
+        /*****设置border-style:dashed;使ie6支持border透明*****/
+        /*border-style: dashed solid dashed dashed;*/
+        border-style: solid solid solid solid;
+        /*****设置容器宽高为0*****/
+        width: 0;
+        height: 0;
+        /*****去掉ie6下默认高度，设置以下属性*****/
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+    }
+
+    .leftArrow {
+        position: absolute;
+        /*left:1%;*/
+        top: 3%;
+        width: 12px;
+        height: 12px;
+    }
+
+    .left1 {
+        border-width: 12px;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left2 {
+        border-width: 12px;
+        border-color: transparent #29bde0 transparent transparent;
+        position: relative;
+        top: -24px;
+        left: 4px;
+    }
+
+    .left1, .left2 {
+        /*****设置border-style:dashed;使ie6支持border透明*****/
+        /*border-style: dashed solid dashed dashed;*/
+        border-style: solid solid solid solid;
+        /*****设置容器宽高为0*****/
+        width: 0;
+        height: 0;
+        /*****去掉ie6下默认高度，设置以下属性*****/
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+    }
+
+    .removeicon {
+        color: white;
+        display: block;
+        position: absolute;
+        top: 3%;
+        right: 2rem;
+        font-size: 25px;
+    }
+
+    .removeicon:before {
+        content: '\2716';
+    }
+
+    .subtraction{
+        /*float: left;*/
+
+        width:20px;
+        height: 20px;
+        background-color: white;
+        /*margin:-150px 0 0 -100px;*/
+        /*top:50%;*/
+        /*left:50%;*/
+        position: absolute;
+        border:1px solid #adadad;
+    }
+    /*定位水平div垂直居中*/
+    .row_div{
+        width:16px;
+        height: 3px;
+        background-color:#fbb435;
+        position: absolute;
+        top:38%;
+        margin:0 auto;
+        left:1px;
+    }
+    /*定位列div水平居中*/
+    .clou_div{
+        width:3px;
+        height: 16px;
+        background-color: #fbb435;
+        left:40%;
+        position: absolute;
+        /*margin:0 0 0 -25px;*/
+    }
+
+    .addition{
+        /*float: left;*/
+
+        width:20px;
+        height: 20px;
+        background-color: white;
+        /*margin:-150px 0 0 -100px;*/
+        /*top:50%;*/
+        /*left:50%;*/
+        position: absolute;
+        border:1px solid #adadad;
+    }
+
+    @media screen and (height:1366px) {
+        .angelright {
+            position: absolute;
+            border: 1.2rem solid transparent;
+            border-left-color: #fbb435;
+            width: 0;
+            height: 0;
+            /*float: right;*/
+            z-index: 999;
+            /*bottom:37%;*/
+            right: 2.5%;
+            /*right:1.8%;*/
+            top: 51%;
+            z-index: 999;
+        }
+
+    }
+    @media screen and (height:1024px) {
+        .angelright {
+            position: absolute;
+            border: 1.2rem solid transparent;
+            border-left-color: #fbb435;
+            width: 0;
+            height: 0;
+            /*float: right;*/
+            z-index: 999;
+            /*bottom:37%;*/
+            right: 2.5%;
+            /*right:1.8%;*/
+            top: 53%;
+            z-index: 999;
+        }
+
+    }
+    @media screen and (width:414px) {
+        .angelright {
+            position: absolute;
+            border: 1.2rem solid transparent;
+            border-left-color: #fbb435;
+            width: 0;
+            height: 0;
+            /*float: right;*/
+            z-index: 999;
+            /*bottom:37%;*/
+            right: 2.5%;
+            /*right:1.8%;*/
+            top: 56.5%;
+            z-index: 999;
+        }
+
+    }
+    @media screen and (min-height:640px) and (max-height:732px) {
+        .angelright {
+            position: absolute;
+            border: 1.2rem solid transparent;
+            border-left-color: #fbb435;
+            width: 0;
+            height: 0;
+            /*float: right;*/
+            z-index: 999;
+            /*bottom:37%;*/
+            right: 2.5%;
+            /*right:1.8%;*/
+            top: 58%;
+            z-index: 999;
+        }
+
+    }
 
 
-.removeicon:before {
-    content: '\2716';
-}
+    @media screen and (min-height:549px) and (max-height:568px) {
+        .angelright {
+            position: absolute;
+            border: 1.2rem solid transparent;
+            border-left-color: #fbb435;
+            width: 0;
+            height: 0;
+            /*float: right;*/
+            z-index: 999;
+            /*bottom:37%;*/
+            right: 2.5%;
+            /*right:1.8%;*/
+            top: 59%;
+            z-index: 999;
+        }
+
+    }

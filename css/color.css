@@ -1,6 +1,6 @@
 /*不管为哪个元素应用什么颜色，都要同时给它一个背景色，否则，就有可能发生一些意外导致看不到某些文本*/
 body{
-    background-color: #eff0f1;
+    background-color: #f0f0f0;
 }
 .header{
     color:white;
@@ -14,7 +14,7 @@ body{
     background: white;
 }
 .lastgame{
-    color:#adadad;
+    color:#9a9a9a;
     border-color:#9d9d9d;
     background-color: white;
 }
@@ -28,17 +28,21 @@ body{
 }
 .versionname{
     color: #FFFFFF;
-    background-color:#29bde0 ;
+    background-color:#69d1e9 ;
+}
+.count{
+    color:#787878;
 }
 .circle{
-    background-color: #adadad;
+    background-color: #f0f0f0;
 }
 .defaultSelected{
-    background-color:#29bde0 ;
+    background-color:#69d1e9 ;
 }
 
 
 /*以下是玩家分配样式*/
+
 .playerAssign{
     background-color: white;
 }
@@ -58,15 +62,25 @@ body{
 .content{
     /*background-color: #29bde0;*/
 }
-
-.rolepanel{
+.rolepanelCenter{
     background-color: #29bde0;
+}
+.rolepanel{
+
 }
 .shift{
     color:white;
     background-color: #ffedc5;
 }
+.showRole{
+    background-color: #29bde0;
+}
 .checkout{
+    color:white;
+    background-color: #fbb435;
+}
+
+.passRole{
     color:white;
     background-color: #fbb435;
 }

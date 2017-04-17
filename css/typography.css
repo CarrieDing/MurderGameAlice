@@ -1,79 +1,116 @@
-/*字体和大小应该放在typography文件中，内边距就先放在layout.css，外边距放置在这里，也可以放在layout里面，看情况而定*/
-body{
-    margin: 0;
-}
-.nav{
-    margin-bottom: .5rem;
-    margin-left: 1rem;
-}
-.lastgame{
-    margin:1rem 1%;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 4px;
-}
-.versions{
-    letter-spacing: 6px;
-}
-.gameTitle{
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-}
-.versionname{
-    font-size: 2.5rem;
-}
-.parent a{
-    text-decoration: none;
-}
-.circle{
-    margin: 0 2px;
-}
 
-/*以下是玩家分配样式*/
+    /*字体和大小应该放在typography文件中，内边距就先放在layout.css，外边距放置在这里，也可以放在layout里面，看情况而定*/
+    body {
+        margin: 0;
+    }
 
-.playerAssign{
-    font-size:2rem;
-    margin: 1rem 0;
-}
-.assign{
-    margin-bottom: 1rem;
-}
-.roles{
-    margin-left: 2%;
-}
-.givenname{
-    margin-bottom: 1rem;
-}
-.number{
-    margin-bottom: 1rem;
-}
-.deal{
-    margin-left: 1%;
-    font-size: 2.5rem;
-}
-.shift{
-    margin-top: 4rem;
-    margin-bottom: 5rem;
-}
-/*以下是翻牌页面样式*/
-.childheader{
-    font-size: 2.5rem;
-}
-.checkout{
-    font-size:3rem;
-    /*margin-bottom: 2%;*/
-}
-.playerCount{
-    margin: 0 1rem;
-    font-weight: bold;
-    font-size: 2rem;
-}
-.numberplate{
-    font-size: 3rem;
-}
-.ghost{
-    font-weight: normal;
-}
-.farm{
-    font-weight: normal;
+    .nav {
+        margin-bottom: .4rem;
+        margin-left: 2%;
+    }
+
+    .lastgame {
+        margin: 1.2rem 3%;
+        /*margin:1rem 1%;*/
+        /*font-size: 2rem;*/
+        font-size: 20px;
+        /*font-weight: bold;*/
+        /*letter-spacing: 4px;*/
+    }
+
+    .versions {
+        /*letter-spacing: 6px;*/
+    }
+
+    .gameTitle {
+        margin-bottom: 1rem;
+        /*font-size: 2.5rem;*/
+        font-size: 26px;
+    }
+
+    .versionname {
+        /*font-size: 2.5rem;*/
+        font-size: 22px;
+    }
+
+    .count {
+        font-size: 14px;
+    }
+
+    .parent a {
+        text-decoration: none;
+    }
+
+    .circle {
+        margin: 0 2px;
+    }
+
+    /*以下是玩家分配样式*/
+    .playerAssign {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    .assign {
+        margin-bottom: .5rem;
+    }
+
+    .roles {
+        margin-left: 2%;
+    }
+
+    .givenname {
+        margin-bottom: .5rem;
+    }
+
+    .number {
+        margin-bottom: .5rem;
+    }
+
+    .deal {
+
+        font-size: 2.5rem;
+    }
+
+    .shift {
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+    }
+
+    /*以下是翻牌页面样式*/
+    .childheader {
+        font-size: 2.5rem;
+    }
+
+    .checkout {
+        font-size: 3rem;
+        /*margin-bottom: 2%;*/
+    }
+
+    .passRole {
+        font-size: 3rem;
+    }
+
+    .playerCount {
+        margin: 0 1rem;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .numberplate {
+        font-size: 3rem;
+    }
+
+    .ghost {
+        font-weight: normal;
+    }
+
+    .farm {
+        font-weight: normal;
+    }
+
+
+
+@media screen and (min-width:960px) and (max-width:1200px) {
+
 }
