@@ -1,4 +1,7 @@
-
+*{
+    padding: 0;
+    margin: 0;
+}
 
     /*以下形状由于特殊性 所有属性就都刚在这一个文件中*/
     .angelleft {
@@ -19,45 +22,33 @@
         border-left-color: #fbb435;
         width: 0;
         height: 0;
-        /*float: right;*/
         z-index: 999;
-        /*bottom:37%;*/
         right: 2.5%;
-        /*right:1.8%;*/
         top: 58%;
         z-index: 999;
     }
 
     .rightArrow {
-        /*float: right;*/
-        /*line-height: 6rem;*/
         position: absolute;
-        /*right:6%;*/
-        /*margin-left:30%;*/
-        /*top:11.5%;*/
-        width: 1rem;
-        height: 1rem;
-        /*margin-top: 2%;*/
-        top: 1.5rem;
-        /*left: 0;*/
-        /*bottom: 0;*/
-        right: 1rem;
-        /*margin-top: auto;*/
-        /*margin-bottom: auto;*/
-
+        width: 22px;
+        height: 25px;
+        top: 20px;
+        right: 2px;
     }
 
     .pre1 {
-        border-width: 1rem;
-        border-color: transparent transparent transparent #e7e7e7;
+        border-width: 10px;
+        border-color: transparent transparent transparent #adadad;
+        border-right:0;
     }
 
     .pre2 {
-        border-width: 1rem;
+        border-width: 10px;
         border-color: transparent transparent transparent #FFF;
         position: relative;
-        top: -24px;
+        top: -20px;
         left: -4px;
+        border-right:0;
     }
 
     .pre1, .pre2 {
@@ -121,16 +112,11 @@
     }
 
     .subtraction{
-        /*float: left;*/
-
         width:20px;
         height: 20px;
         background-color: white;
-        /*margin:-150px 0 0 -100px;*/
-        /*top:50%;*/
-        /*left:50%;*/
         position: absolute;
-        border:1px solid #adadad;
+        border:1px solid #fbb435;
     }
     /*定位水平div垂直居中*/
     .row_div{
@@ -149,20 +135,14 @@
         background-color: #fbb435;
         left:40%;
         position: absolute;
-        /*margin:0 0 0 -25px;*/
     }
 
     .addition{
-        /*float: left;*/
-
         width:20px;
         height: 20px;
         background-color: white;
-        /*margin:-150px 0 0 -100px;*/
-        /*top:50%;*/
-        /*left:50%;*/
         position: absolute;
-        border:1px solid #adadad;
+        border:1px solid #fbb435;
     }
 
     @media screen and (height:1366px) {
@@ -172,12 +152,9 @@
             border-left-color: #fbb435;
             width: 0;
             height: 0;
-            /*float: right;*/
             z-index: 999;
-            /*bottom:37%;*/
             right: 2.5%;
-            /*right:1.8%;*/
-            top: 51%;
+            top: 50%;
             z-index: 999;
         }
 
@@ -189,12 +166,9 @@
             border-left-color: #fbb435;
             width: 0;
             height: 0;
-            /*float: right;*/
             z-index: 999;
-            /*bottom:37%;*/
             right: 2.5%;
-            /*right:1.8%;*/
-            top: 53%;
+            top: 52%;
             z-index: 999;
         }
 
@@ -206,12 +180,9 @@
             border-left-color: #fbb435;
             width: 0;
             height: 0;
-            /*float: right;*/
             z-index: 999;
-            /*bottom:37%;*/
             right: 2.5%;
-            /*right:1.8%;*/
-            top: 56.5%;
+            top: 55%;
             z-index: 999;
         }
 
@@ -223,15 +194,11 @@
             border-left-color: #fbb435;
             width: 0;
             height: 0;
-            /*float: right;*/
             z-index: 999;
-            /*bottom:37%;*/
             right: 2.5%;
-            /*right:1.8%;*/
-            top: 58%;
+            top: 56%;
             z-index: 999;
         }
-
     }
 
 
@@ -242,13 +209,9 @@
             border-left-color: #fbb435;
             width: 0;
             height: 0;
-            /*float: right;*/
             z-index: 999;
-            /*bottom:37%;*/
             right: 2.5%;
-            /*right:1.8%;*/
             top: 59%;
             z-index: 999;
         }
-
     }

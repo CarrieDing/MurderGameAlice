@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2017/4/12.
  */
+/*Common function*/
 function addLoadEvent(func) {
     var oldonload=window.onload;
     if(typeof window.onload!='function'){
@@ -23,352 +24,242 @@ function checkNumber(num) {
     }
     return false;
 }
+function getItemValue(id) {
+    var item = getItem(id);
+    return item.value;
+}
+function changeValue(id,val) {
+    var setValue=getItem(id);
+    setValue.value=val;
+}
+function getItem(id) {
+    if (!document.getElementById(id)) return false;
+    return document.getElementById(id);
+}
 function pageJump(url) {
     self.location=url;
 }
+/*Jump action*/
 function gotoAssignment() {
-    if(!document.getElementById("simpleVer")) return false;
-    var gotoAssignemnt=document.getElementById("simpleVer");
+    var gotoAssignemnt=getItem("simpleVer");
     gotoAssignemnt.onclick=function(){
         pageJump("assignment.html");
     };
 }
-
-function createRoles() {
-var count=document.getElementById("players").value;
-    if(!checkNumber(count)||count>18||count<4){
-        Showbo.Msg.confirm("请输入正确的玩家数量。");
-    }else{
-        var arr=[count];
-        if(count>=4&&count<6){
-            arr[0]="杀手";
-            for(j=1;j<count;j++){
-                arr[j]="平民";
-            }
-        }
-        if(count>=6&&count<9){
-            arr[0]="杀手";
-            arr[1]="杀手";
-            for(j=2;j<count;j++){
-                arr[j]="平民";
-            }
-        }
-        if(count>=9&&count<12){
-            arr[0]="杀手";
-            arr[1]="杀手";
-            arr[2]="杀手";
-            for(j=3;j<count;j++){
-                arr[j]="平民";
-            }
-        }
-        if(count>=12&&count<16){
-            arr[0]="杀手";
-            arr[1]="杀手";
-            arr[2]="杀手";
-            arr[3]="杀手";
-            for(j=4;j<count;j++){
-                arr[j]="平民";
-            }
-        }
-        if(count>=16&&count<19){
-            arr[0]="杀手";
-            arr[1]="杀手";
-            arr[2]="杀手";
-            arr[3]="杀手";
-            arr[4]="杀手";
-            for(j=5;j<count;j++){
-                arr[j]="平民";
-            }
-        }
-
-        shuffle(arr);
-        if(!document.getElementById("colm1")) return false;
-        var colm1=document.getElementById("colm1");
-
-        if(!document.getElementById("colm2")) return false;
-        var colm2=document.getElementById("colm2");
-
-
-
-
-        for(var t=0;t<Math.ceil(count/2);t++){
-            // alert(Math.ceil(count/2));
-            if(arr[t]=="平民"){
-                var para=document.createElement("p");
-                para.style.marginBottom="10px";
-
-                var txt=document.createElement("span");
-                txt.style.width="6px";
-                txt.style.height="6px";
-                txt.style.display="inline-block";
-                txt.style.background="#69d1e9";
-                txt.style.marginRight="10px";
-                para.appendChild(txt);
-                var str=arr[t]+"1人";
-                var rolename=document.createTextNode(str);
-                // rolename.fontSize="1.5rem";
-                 para.appendChild(rolename);
-                colm1.appendChild(para);
-            }
-            else{
-                var para=document.createElement("p");
-                para.style.marginBottom="10px";
-                var txt=document.createElement("span");
-                txt.style.width="6px";
-                txt.style.height="6px";
-                txt.style.display="inline-block";
-                txt.style.background="#fbb435";
-                txt.style.marginRight="10px";
-                para.appendChild(txt);
-                var str=arr[t]+"1人";
-                var rolename=document.createTextNode(str);
-
-                para.appendChild(rolename);
-                colm1.appendChild(para);
-            }
-        }
-
-        for(var k=Math.ceil(count/2);k<count;k++){
-            if(arr[k]=="平民"){
-            var para=document.createElement("p");
-            para.style.marginBottom="10px";
-            var txt=document.createElement("span");
-            txt.style.width="6px";
-            txt.style.height="6px";
-            txt.style.display="inline-block";
-            txt.style.background="#69d1e9";
-                txt.style.marginRight="10px";
-            para.appendChild(txt);
-            var str=arr[k]+"1人";
-            var rolename=document.createTextNode(str);
-
-            para.appendChild(rolename);
-            colm2.appendChild(para);
-            }
-            else{
-                var para=document.createElement("p");
-                para.style.marginBottom="10px";
-                var txt=document.createElement("span");
-                txt.style.width="6px";
-                txt.style.height="6px";
-                txt.style.display="inline-block";
-                txt.style.background="#fbb435";
-                txt.style.marginRight="10px";
-                para.appendChild(txt);
-                var str=arr[k]+"1人";
-                var rolename=document.createTextNode(str);
-
-                para.appendChild(rolename);
-                colm2.appendChild(para);
-            }
-        }
-    }
-}
-/*暂时保留以备后用*/
-function playerChanged() {
-    if(!document.getElementById("players")) return false;
-    var playerInput=document.getElementById("players");
-
-    playerInput.oninput=function(){
-        OnInputChanged(event);
-    };
-    playerInput.onpropertychange=function(){
-        OnInputChanged(event);
-    };
-    if(playerInput.addEventListener)
-        playerInput.addEventListener('input',OnInputChanged,false);
-}
-function OnInputChanged(event) {
-    if(!document.getElementById("players")) return false;
-    var count=document.getElementById("players");
-    if(event.target.value=="")
-    {
-        // createRoles();
-        // ghost.innerHTML = "杀手  人";
-        // farm.innerHTML = "农民  人";
-    }
-    else{
-        count=event.target.value;
-        checkNumber(count)
-        if(count>=4&&count<6){
-            createRoles();
-
-            // ghost.innerHTML = "杀手 1 人";
-            // farm.innerHTML = "农民 " + (count - 1) + " 人";
-        }
-        if(count>=6&&count<9){
-            createRoles();
-            // ghost.innerHTML = "杀手 2 人";
-            // farm.innerHTML = "农民 " + (count - 2) + " 人";
-        }
-        if(count>=9&&count<12){
-            createRoles();
-            // ghost.innerHTML = "杀手 3 人";
-            // farm.innerHTML = "农民 " + (count - 3) + " 人";
-        }
-        if(count>=12&&count<16){
-            createRoles();
-            // ghost.innerHTML = "杀手 4 人";
-            // farm.innerHTML = "农民 " + (count - 4) + " 人";
-        }
-        if(count>=16&&count<19){
-            createRoles();
-            // ghost.innerHTML = "杀手 5 人";
-            // farm.innerHTML = "农民 " + (count - 5) + " 人";
-        }
-    }
-}
 function deal() {
-    if(!document.getElementById("deal")) return false;
-    var deal=document.getElementById("deal");
+    var deal=getItem("deal");
     deal.onclick=function () {
-        if(!document.getElementById("colm1")) return false;
-        var checkSet=document.getElementById("colm1");
+        var checkSet=getItem("colm1");
         if(!checkSet.hasChildNodes()) {
             Showbo.Msg.alert("请先点击设置进行配置");
         } else{
             pageJump("role.html");
         }
-
     }
 }
 function returnChooseVersion() {
-    if(!document.getElementById("leftArrow")) return false;
-    var returnChooseVer=document.getElementById("leftArrow");
+    var returnChooseVer=getItem("leftArrow");
     returnChooseVer.onclick=function () {
-
         pageJump("home.html");
     }
 }
 function backAssign() {
-    if(!document.getElementById("backAssign")) return false;
-    var backAssign=document.getElementById("backAssign");
+    var backAssign=getItem("backAssign");
     backAssign.onclick=function () {
-        if(!document.getElementById("flop")) return false;
-        var flop=document.getElementById("flop");
+        var flop=getItem("flop");
         flop.style.display="block";
         pageJump("assignment.html");
     }
 }
 function returnAssign() {
-    if(!document.getElementById("leftArrow")) return false;
-    var returnAssign=document.getElementById("leftArrow");
+    var returnAssign=getItem("leftArrow");
     returnAssign.onclick=function () {
         pageJump("assignment.html");
     }
 }
 function gameOver() {
-    if(!document.getElementById("returnChooseVersion")) return false;
-    var returnChooseVer=document.getElementById("returnChooseVersion");
+    var returnChooseVer=getItem("returnChooseVersion");
     returnChooseVer.onclick=function () {
         var result=Showbo.Msg.confirm("结束本轮游戏吗？");
-        if(!document.getElementById("testbyalice")) return false;
-        var confirmbtn=document.getElementById("testbyalice");
+        var confirmbtn=getItem("testbyalice");
         confirmbtn.onclick=function () {
-            if(!document.getElementById("flop")) return false;
-            var flop=document.getElementById("flop");
+            var flop=getItem("flop");
             flop.style.display="block";
             pageJump("home.html");
         }
-
+    }
+}
+function createRole(num,role){
+    var arr=Array(num);
+    for(var i=0;i<num;i++)
+        arr[i]=role;
+    return arr;
+}
+function createElement(arr,index,color) {
+    var para=document.createElement("p");
+    para.style.marginBottom="10px";
+    var txt=document.createElement("span");
+    txt.style.width="6px";
+    txt.style.height="6px";
+    txt.style.display="inline-block";
+    txt.style.background=color;
+    txt.style.marginRight="10px";
+    para.appendChild(txt);
+    var str=arr[index]+"1人";
+    var rolename=document.createTextNode(str);
+    para.appendChild(rolename);
+    return para;
+}
+function shuffleRole() {
+    var count=getItem("players").value;
+    if(!checkNumber(count)||count>18||count<4){
+        Showbo.Msg.confirm("请输入4-18之间的整数。");
+    }else{
+        var r1,r2;
+        if(count>=4&&count<6){
+            r1=createRole(1,"平民");
+            r2=createRole(count-1,"杀手");
+        }
+        if(count>=6&&count<9){
+            r1=createRole(2,"平民");
+            r2=createRole(count-2,"杀手");
+        }
+        if(count>=9&&count<12){
+            r1=createRole(3,"平民");
+            r2=createRole(count-3,"杀手");
+        }
+        if(count>=12&&count<16){
+            r1=createRole(4,"平民");
+            r2=createRole(count-4,"杀手");
+        }
+        if(count>=16&&count<19){
+            r1=createRole(5,"平民");
+            r2=createRole(count-5,"杀手");
+        }
+        var arr=r1.concat(r2);
+        shuffle(arr);
+       addRole2Panel(arr,count);
+    }
+}
+function addRole2Panel(arr,count) {
+    var colm1=getItem("colm1");
+    var colm2=getItem("colm2");
+    for(var t=0;t<Math.ceil(count/2);t++){
+        if(arr[t]=="平民"){colm1.appendChild(createElement(arr,t,"#69d1e9"));}
+        else{colm1.appendChild(createElement(arr,t,"#fbb435"));}
+    }
+    for(var k=Math.ceil(count/2);k<count;k++){
+        if(arr[k]=="平民"){colm2.appendChild(createElement(arr,k,"#69d1e9"));}
+        else{colm2.appendChild(createElement(arr,k,"#fbb435"));}
     }
 }
 function checkRole() {
-    if(!document.getElementById("checkRole")) return false;
-    var checkRole=document.getElementById("checkRole");
+    var checkRole=getItem("checkRole");
     checkRole.onclick=function () {
         checkRole.style.display="none";
-
-        if(!document.getElementById("passRole")) return false;
-        var passRole=document.getElementById("passRole");
+        var passRole=getItem("passRole");
         passRole.style.display="block";
-
-        if(!document.getElementById("roleuncover")) return false;
-        var roleuncover=document.getElementById("roleuncover");
+        var roleuncover=getItem("roleuncover");
         roleuncover.style.display="block";
-
-        if(!document.getElementById("rolename")) return false;
-        var rolename=document.getElementById("rolename");
+        var rolename=getItem("rolename");
         rolename.style.display="block";
-
-        if(!document.getElementById("flop")) return false;
-        var flop=document.getElementById("flop");
+        var flop=getItem("flop");
         flop.style.display="none";
     }
 }
 function setClick() {
-    if(!document.getElementById("grandChild2")) return false;
-    var setClick=document.getElementById("grandChild2");
+    var setClick=getItem("grandChild2");
     setClick.onclick=function () {
-        if(!document.getElementById("colm1")) return false;
-        var removeRoles=document.getElementById("colm1");
+        var removeRoles=getItem("colm1");
         while(removeRoles.hasChildNodes()){
             removeRoles.removeChild(removeRoles.firstChild);
         }
-
-        if(!document.getElementById("colm2")) return false;
-        var removeRoles2=document.getElementById("colm2");
+        var removeRoles2=getItem("colm2");
         while(removeRoles2.hasChildNodes()){
             removeRoles2.removeChild(removeRoles2.firstChild);
         }
+        shuffleRole();
 
-        createRoles();
     }
 }
+/*input range action*/
 function adddition() {
-    if (!document.getElementById("addition")) return false;
-    var addRole = document.getElementById("addition");
+    var addRole =  getItem("addition");
     addRole.onclick = function () {
-
-        if (!document.getElementById("slidebar")) return false;
-        var bar = document.getElementById("slidebar");
-
-        var getstep=document.getElementById("slidebar").step;
-        var newvalue = parseInt(bar.value) + 1;
-        bar.value = newvalue;
-        bar.style.background = 'linear-gradient(to right, #d58512, #fcc671 ' + (newvalue / 14) * 100 + '%, #fcc671)';
-
-        if(!document.getElementById("players")) return false;
-        var setValue=document.getElementById("players");
-        var oldvalue=parseInt(setValue.value);
+        var bar = getItem("slidebar");
+        var getstep=bar.step;
+        var newvalue = parseInt(getItemValue("slidebar")) + 1;
+        changeValue("slidebar",newvalue);
+        sliderColorChange("slidebar",newvalue);
+        var oldvalue=parseInt(getItemValue("players"));
         var step=parseInt(getstep);
         var newvalue=oldvalue+step;
         if(newvalue>18){
             Showbo.Msg.alert("最大值不能超过18");
-
-            setValue.value=18;
+            changeValue("players",18);
+            changeValue("slidebar",18);
         }else{
-            setValue.value=newvalue;
+            changeValue("players",newvalue);
         }
     }
 }
 function substraction() {
-    if (!document.getElementById("substraction")) return false;
-    var subRole = document.getElementById("substraction");
+    var subRole = getItem("substraction");
     subRole.onclick = function () {
-
-        if (!document.getElementById("slidebar")) return false;
-        var bar = document.getElementById("slidebar");
-        var getstep=document.getElementById("slidebar").step;
-        var newvalue = parseInt(bar.value) - 1;
-        bar.value = newvalue;
-        bar.style.background = 'linear-gradient(to right, #d58512, #fcc671 ' + (newvalue / 14) * 100 + '%, #fcc671)';
-
-
-        if(!document.getElementById("players")) return false;
-        var setValue=document.getElementById("players");
-        var oldvalue=parseInt(setValue.value);
+        var bar = getItem("slidebar");
+        var getstep=bar.step;
+        var newvalue = parseInt(getItemValue("slidebar")) - 1;
+        changeValue("slidebar",newvalue);
+        sliderColorChange("slidebar",newvalue);
+        var oldvalue=parseInt(getItemValue("players"));
         var step=parseInt(getstep);
         var newvalue=oldvalue-step;
         if(newvalue<4){
             Showbo.Msg.alert("最小值不能少于4");
-            setValue.value=4;
+            changeValue("players",4);
+            changeValue("slidebar",4);
         }else{
-            setValue.value=newvalue;
+            changeValue("players",newvalue);
         }
     }
 }
-
+function changeStep(item,locationX) {
+    var spaceline=parseInt(item.offsetWidth)/14;
+    var x0=item.offsetLeft;
+    var t1=locationX-x0;
+    if(t1<=0) {
+        changeValue("slidebar",4);
+        changeValue("players",4);
+    }
+    if(t1>0&&t1<=item.offsetWidth){
+        var movestep=Math.ceil((t1-item.offsetWidth)/spaceline);
+        var newvalue=18+movestep;
+        changeValue("slidebar",newvalue);
+        sliderColorChange("slidebar",newvalue);
+        changeValue("players",newvalue);
+    }
+}
+function sliderthumb() {
+    var bar = getItem("slidebar");
+    bar.onclick=function (event) {
+        var e = event || window.event;
+        var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+        var x = e.pageX || e.clientX + scrollX;
+        changeStep(bar,x);
+    }
+}
+function touchMove() {
+    var bar = getItem("slidebar");
+    bar.addEventListener('touchmove',function (event) {
+        var touch = event.targetTouches[0];
+        var x = touch.pageX;
+        changeStep(bar,x);
+    });
+}
+function sliderColorChange(id,offsetDistance) {
+    var bar = getItem(id);
+    bar.style.background = 'linear-gradient(to right, #d58512, #fcc671 ' + (offsetDistance / 14) * 100 + '%, #fcc671)';
+}
 addLoadEvent(gotoAssignment);
 addLoadEvent(deal);
 addLoadEvent(returnAssign);
@@ -377,6 +268,7 @@ addLoadEvent(gameOver);
 addLoadEvent(checkRole);
 addLoadEvent(setClick);
 addLoadEvent(backAssign);
-
 addLoadEvent(adddition);
 addLoadEvent(substraction);
+addLoadEvent(sliderthumb);
+addLoadEvent(touchMove);

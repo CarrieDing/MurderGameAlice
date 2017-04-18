@@ -1,4 +1,8 @@
-
+*{
+    padding: 0;
+    margin: 0;
+    border:0;
+}
     /*字体和大小应该放在typography文件中，内边距就先放在layout.css，外边距放置在这里，也可以放在layout里面，看情况而定*/
     body {
         margin: 0;
@@ -11,25 +15,15 @@
 
     .lastgame {
         margin: 1.2rem 3%;
-        /*margin:1rem 1%;*/
-        /*font-size: 2rem;*/
         font-size: 20px;
-        /*font-weight: bold;*/
-        /*letter-spacing: 4px;*/
-    }
 
-    .versions {
-        /*letter-spacing: 6px;*/
     }
-
     .gameTitle {
         margin-bottom: 1rem;
-        /*font-size: 2.5rem;*/
         font-size: 26px;
     }
 
     .versionname {
-        /*font-size: 2.5rem;*/
         font-size: 22px;
     }
 
@@ -39,10 +33,6 @@
 
     .parent a {
         text-decoration: none;
-    }
-
-    .circle {
-        margin: 0 2px;
     }
 
     /*以下是玩家分配样式*/
@@ -68,7 +58,6 @@
     }
 
     .deal {
-
         font-size: 2.5rem;
     }
 
@@ -84,7 +73,6 @@
 
     .checkout {
         font-size: 3rem;
-        /*margin-bottom: 2%;*/
     }
 
     .passRole {
