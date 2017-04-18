@@ -147,7 +147,7 @@
     .childCell2{
         display: -webkit-box;
         display: flex;
-
+-webkit-box-orient: vertical;
         flex-direction: column;
         width: 80%;
         background-color: #fbfbfb;
@@ -183,6 +183,7 @@
         height: calc(100% - 2rem);
         font-size: 1.5rem;
         display: -webkit-box;
+
         display: flex;
         flex-direction: column;
         align-items: center;
