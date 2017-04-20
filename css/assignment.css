@@ -267,9 +267,10 @@ input[type=range]:focus {
     background-color: #eff0f1;
 }
 .help{
+    position: absolute;
     /*z-index: -999;*/
 /*float: right;*/
-  /*margin-right: 10px;!important;*/
+ right:2px;
     width: 35px;
     height: 35px;
 }
