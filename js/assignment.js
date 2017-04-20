@@ -180,24 +180,24 @@ function shuffleRole() {
     }else{
         var r1,r2;
         if(count>=4&&count<6){
-            r1=createRole(1,"平民");
-            r2=createRole(count-1,"杀手");
+            r1=createRole(1,"杀手");
+            r2=createRole(count-1,"水民");
         }
         if(count>=6&&count<9){
-            r1=createRole(2,"平民");
-            r2=createRole(count-2,"杀手");
+            r1=createRole(2,"杀手");
+            r2=createRole(count-2,"水民");
         }
         if(count>=9&&count<12){
-            r1=createRole(3,"平民");
-            r2=createRole(count-3,"杀手");
+            r1=createRole(3,"杀手");
+            r2=createRole(count-3,"水民");
         }
         if(count>=12&&count<16){
-            r1=createRole(4,"平民");
-            r2=createRole(count-4,"杀手");
+            r1=createRole(4,"杀手");
+            r2=createRole(count-4,"水民");
         }
         if(count>=16&&count<19){
-            r1=createRole(5,"平民");
-            r2=createRole(count-5,"杀手");
+            r1=createRole(5,"杀手");
+            r2=createRole(count-5,"水民");
         }
         arr=r1.concat(r2);
         shuffle(arr);
@@ -240,6 +240,18 @@ function createElement(arr,index,color) {
     para.appendChild(rolename);
     return para;
 }
+function initalPanel() {
+    var count=getItembyID("players").value;
+    var r1=createRole(1,"杀手");
+    var r2=createRole(count-1,"水民");
+    var intialarr=r1.concat(r2);
+    shuffle(intialarr);
+    for(var j=0;j<intialarr.length;j++){
+        sessionStorage.setItem(j,intialarr[j]);
+    }
+    addRole2Panel(intialarr,count);
+}
+addLoadEvent(initalPanel);
 addLoadEvent(setClick);
 addLoadEvent(adddition);
 addLoadEvent(substraction);
