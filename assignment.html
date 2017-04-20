@@ -5,17 +5,20 @@
     <!-- viewport用于移动端屏幕的适应以及缩放-->
     <title>玩家配比</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/basic.css" rel="stylesheet" />
+    <link href="css/assignment.css" rel="stylesheet" />
+    <link href="css/CSSshape.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/showBo.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-
+<div class="wrap">
 <div id="leftArrow" class="leftArrow">
     <div class="left1"></div>
     <div class="left2"></div>
 </div>
 
-<!--<div class="content">-->
-<div class="banner"><img class="help" src="images/help.png"/></div>
+<div class="header"><img class="help" src="images/help.png"/></div>
+<div class="content assignContent">
     <div class="Grid">
         <div class="Grid-cell1">
             <div class="childCell1">玩<br />家<br />配<br />比</div>
@@ -25,7 +28,7 @@
                     <div id="colm2" class="colm2"></div>
                 </div>
                 <button id="grandChild2" class="grandChild2">
-                    点击设置
+                    点击分配角色
                     <img src="images/pencil.png" />
                 </button>
             </div>
@@ -60,12 +63,13 @@
             </div>
     </div>
     </div>
-<div class="assign-footer">
-    <button class="deal" id="deal">去发牌</button>
 </div>
-<!--</div>-->
-
+<div class="footer assignFooter">
+    <button class="btnAction" id="deal">去发牌</button>
+</div>
+</div>
 <script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/assignment.js"></script>
 <script type="text/javascript" src="js/showBo.js"></script>
 
 

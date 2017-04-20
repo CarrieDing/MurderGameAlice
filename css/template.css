@@ -1,0 +1,86 @@
+*{margin: 0;padding: 0}
+html,body{
+    margin: 0;
+    padding: 0;
+
+}
+.wrap{
+    margin:0 auto;
+    /*兼容IE9*/
+    width: 100vm;
+    height: 100%;
+    width: 100vmin;
+    height: 100%;
+    /*保证上右左居中显示*/
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-color:#c9c9c9;
+    background-color: #f0f0f0;
+
+}
+/*以下是法官日至页面样式*/
+.header{
+    height: calc(10% - 1px);
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28px;
+    color:white;
+    border-bottom: 1px solid #74d4eb;
+    background-color:#29bde0 ;
+}
+
+
+.content{
+    height: 80%;
+    overflow-y: auto;
+    /*border:1px solid red;*/
+}
+
+
+.frame{
+    float: left;
+    margin-left: calc((100vmin - 88px*3)/4);
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+    background-color: #f5c97b;
+    border:4px solid white;
+    display: flex;
+    flex-direction: column;
+}
+.rolename{
+    flex:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rolenumber{
+    flex: 1;
+    height:20px;
+    width: 100%;
+    background-color: #83b09a;
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnAction{
+    width: 80%;
+    height:80%;
+    border:none;
+    outline: none;
+    background-color:#fbb435;
+    font-size: 30px;
+    color:white;
+}

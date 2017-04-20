@@ -5,30 +5,37 @@
     <!-- viewport用于移动端屏幕的适应以及缩放-->
     <title>玩家配比</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/basic.css" rel="stylesheet" />
+    <!--<link href="css/basic.css" rel="stylesheet" />-->
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/CSSshape.css" rel="stylesheet">
+    <link href="css/role.css" rel="stylesheet">
 </head>
 <body>
-<div class="numberplate">1</div>
+<div class="wrap">
 <div id="backAssign" class="leftArrow">
     <div class="left1"></div>
     <div class="left2"></div>
 </div>
 <span id="returnChooseVersion" class="removeicon"></span>
-<div class="childheader">查看身份</div>
-<div class="rolepanelCenter">
+<div class="header">查看身份</div>
+<div class="content rolepanelCenter">
+    <div id="numberplate" class="numberplate">1</div>
     <div class="rolepanel">
         <div id="shift" class="shift">
             <img id="flop" class="flop" src="images/flop.png" />
             <img id="roleuncover" class="roleuncover" src="images/roleuncover.png"/>
-            <p id="rolename" class="rolename">平民</p>
+            <p id="rolenameshow" class="rolenameshow"></p>
         </div>
     </div>
 </div>
-<div class="showRole">
-    <input type="button" id="checkRole" class="checkout" value="查看1号身份" />
-    <input type="button" id="passRole" class="passRole" value="隐藏并传递给2号" />
+<div class="footer roleFoot">
+    <input type="button" id="checkRole" class="btnAction" value="查看1号身份" />
+    <input type="button" id="passRole" class="btnAction" value="隐藏并传递给2号" style="display: none"/>
+</div>
+
 </div>
 <script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/role.js"></script>
 <script type="text/javascript" src="js/showBo.js"></script>
 </body>
 </html>

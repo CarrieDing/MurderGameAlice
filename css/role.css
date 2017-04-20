@@ -1,0 +1,112 @@
+.rolepanel{
+    display: -webkit-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /*实现容器内容垂直居中*/
+    width: 70%;
+    height:80%;
+}
+.shift{
+    flex: 1;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*实现容器内容垂直居中*/
+    align-items: center; /* 实现容器内的内容水平居中*/
+    border:4px solid;
+    /*height: 80%;*/
+}
+.showRole{
+    height: 10%;
+    width:100%;
+}
+.flop{
+    width:200px;
+    height:200px;
+    display: block;
+}
+
+.rolenameshow{
+    display: -webkit-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /*实现容器内容垂直居中*/
+    align-items: center; /* 实现容器内的内容水平居中*/
+    display: block;
+    font-size: 2.5rem;
+    color:#29bde0;
+    display: none;
+}
+.roleuncover{
+    display: none;
+}
+
+.shift{
+    color:white;
+    background-color: #ffedc5;
+}
+.showRole{
+    background-color: #29bde0;
+}
+
+.rolepanelCenter{
+    display: -webkit-box;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:80%;
+    border-top:1px solid white;
+    background-color: #29bde0;
+}
+
+.numberplate{
+    position: absolute;
+    border:2px solid;
+    border-radius: 50%;
+    width:5rem;
+    height: 5rem;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*实现容器内容垂直居中*/
+    align-items: center; /* 实现容器内的内容水平居中*/
+    top:13%;
+    left:calc((100% - 5rem)/2);
+}
+
+
+
+.numberplate{
+    border-color:#ffedc5;
+    background-color: white;
+    color:red;
+}
+
+.numberplate {
+    font-size: 3rem;
+}
+
+.passRole {
+    font-size: 3rem;
+}
+
+.playerCount {
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.numberplate {
+    font-size: 3rem;
+}
+
+.ghost {
+    font-weight: normal;
+}
+
+.farm {
+    font-weight: normal;
+}
+.roleFoot{
+    background-color: #29bde0;
+}
