@@ -83,13 +83,37 @@ function substraction() {
         shuffleRole();
     }
 }
+
+function findPosition( oElement )
+{
+    var x = 0;
+    var width = oElement.offsetWidth;
+    if( typeof( oElement.offsetParent ) != 'undefined' )
+    {
+        for( var posX = 0; oElement; oElement = oElement.offsetParent )
+        {
+            posX += oElement.offsetLeft;
+        }
+        x = posX;
+        return x;
+    } else{
+        x = oElement.x;
+        return x;
+    }
+}
 function changeStep(item,locationX) {
     var spaceline=parseInt(item.offsetWidth)/14;
-    var x0=item.offsetLeft;
+    // var x0=item.offsetLeft;
+    var x0=findPosition(item);
+
     var t1=locationX-x0;
+
     if(t1<=0) {
         changeValue("slidebar",4);
         changeValue("players",4);
+        clearPanel("colm1");
+        clearPanel("colm2");
+        shuffleRole();
     }
     if(t1>0&&t1<=item.offsetWidth){
         var movestep=Math.ceil((t1-item.offsetWidth)/spaceline);
@@ -97,6 +121,9 @@ function changeStep(item,locationX) {
         changeValue("slidebar",newvalue);
         sliderColorChange("slidebar",newvalue);
         changeValue("players",newvalue);
+        clearPanel("colm1");
+        clearPanel("colm2");
+        shuffleRole();
     }
 }
 function sliderthumb() {
@@ -106,9 +133,6 @@ function sliderthumb() {
         var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
         var x = e.pageX || e.clientX + scrollX;
         changeStep(bar,x);
-        clearPanel("colm1");
-        clearPanel("colm2");
-        shuffleRole();
     }
 }
 function touchMove() {
@@ -117,9 +141,6 @@ function touchMove() {
         var touch = event.targetTouches[0];
         var x = touch.pageX;
         changeStep(bar,x);
-        clearPanel("colm1");
-        clearPanel("colm2");
-        shuffleRole();
     });
 }
 function sliderColorChange(id,offsetDistance) {
