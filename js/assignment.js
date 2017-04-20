@@ -106,6 +106,9 @@ function sliderthumb() {
         var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
         var x = e.pageX || e.clientX + scrollX;
         changeStep(bar,x);
+        clearPanel("colm1");
+        clearPanel("colm2");
+        shuffleRole();
     }
 }
 function touchMove() {
@@ -114,6 +117,9 @@ function touchMove() {
         var touch = event.targetTouches[0];
         var x = touch.pageX;
         changeStep(bar,x);
+        clearPanel("colm1");
+        clearPanel("colm2");
+        shuffleRole();
     });
 }
 function sliderColorChange(id,offsetDistance) {
