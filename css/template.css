@@ -44,7 +44,7 @@ html,body{
     float: left;
     margin-left: calc((100vmin - 88px*3)/4);
     margin-top: 20px;
-    height: 110px;
+    height: 80px;
     width: 80px;
     border:4px solid white;
     display: flex;
