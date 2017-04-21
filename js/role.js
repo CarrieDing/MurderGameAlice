@@ -29,24 +29,31 @@ function checkRole() {
     checkRole.onclick=function () {
 
         var passRole=getItembyID("passRole");
-        if(i>sessionStorage.length-2){
+        if(i>localStorage.length-4){
             passRole.value="法官查看";
             hideItem("flop");
             showItem("roleuncover");
+            showItem("tips");
         }else{
             showItem("roleuncover");
             hideItem("flop");
+            showItem("tips");
             passRole.value="隐藏并传递给"+(i+2)+"号";
+            var numberplate=getItembyID("numberplate");
+            numberplate.innerHTML=i+1;
             i++;
         }
         hideItem("checkRole");
         showItem("passRole");
 
         var rolenameshow=getItembyID("rolenameshow");
-        rolenameshow.innerHTML= sessionStorage.getItem(i);
+        if(localStorage.getItem(i-1)=="杀手"){
+            rolenameshow.innerHTML= "角色："+localStorage.getItem(i-1)+"<br />"+"<span style='color:#f56b81'>词组："+localStorage.getItem("setname2")+"</span>";
+        }else{
+            rolenameshow.innerHTML= "角色："+localStorage.getItem(i-1)+"<br />"+"<span style='color:#f56b81'>词组："+localStorage.getItem("setname1")+"</span>";
+        }
+
         showItem("rolenameshow");
-        var numberplate=getItembyID("numberplate");
-        numberplate.innerHTML=i+1;
     }
 }
 function passRole() {
@@ -59,6 +66,7 @@ function passRole() {
             hideItem("passRole");
             hideItem("roleuncover");
             hideItem("rolenameshow");
+            hideItem("tips");
             showItem("flop");
             showItem("checkRole");
             var numberplate=getItembyID("numberplate");
@@ -67,7 +75,10 @@ function passRole() {
         }
     }
 }
-
+function inital() {
+    hideItem("tips");
+}
+addLoadEvent(inital);
 addLoadEvent(passRole);
 addLoadEvent(checkRole);
 addLoadEvent(backAssign);

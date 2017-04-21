@@ -30,9 +30,9 @@ function OnInputChanged(event) {
     else{
         count=event.target.value;
         // checkNumber(count)
-        clearPanel("colm1");
-        clearPanel("colm2");
-        shuffleRole();
+        // clearPanel("colm1");
+        // clearPanel("colm2");
+        // shuffleRole();
         var sliderbar=getItembyID("slidebar");
         sliderbar.value=count;
     }
@@ -55,9 +55,9 @@ function adddition() {
         }else{
             changeValue("players",newvalue);
         }
-        clearPanel("colm1");
-        clearPanel("colm2");
-        shuffleRole();
+        // clearPanel("colm1");
+        // clearPanel("colm2");
+        // shuffleRole();
     }
 }
 function substraction() {
@@ -78,9 +78,9 @@ function substraction() {
         }else{
             changeValue("players",newvalue);
         }
-        clearPanel("colm1");
-        clearPanel("colm2");
-        shuffleRole();
+        // clearPanel("colm1");
+        // clearPanel("colm2");
+        // shuffleRole();
     }
 }
 
@@ -121,9 +121,9 @@ function changeStep(item,locationX) {
         changeValue("slidebar",newvalue);
         sliderColorChange("slidebar",newvalue);
         changeValue("players",newvalue);
-        clearPanel("colm1");
-        clearPanel("colm2");
-        shuffleRole();
+        // clearPanel("colm1");
+        // clearPanel("colm2");
+        // shuffleRole();
     }
 }
 function sliderthumb() {
@@ -163,11 +163,17 @@ function setClick() {
 }
 function deal() {
     var deal=getItembyID("deal");
+
     deal.onclick=function () {
+        var setName1=getItembyID("setname1");
+        var setName2=getItembyID("setname2");
         var checkSet=getItembyID("colm1");
         if(!checkSet.hasChildNodes()) {
-            Showbo.Msg.alert("请先点击设置进行配置");
-        } else{
+            Showbo.Msg.alert("请先点击设置进行角色分配");
+        } else if(setName1.value==""||setName2.value==""){
+            Showbo.Msg.alert("请先输入角色数组");
+        }
+        else{
             pageJump("role.html");
 
         }
@@ -181,30 +187,31 @@ function shuffleRole() {
         var r1,r2;
         if(count>=4&&count<6){
             r1=createRole(1,"杀手");
-            r2=createRole(count-1,"水民");
+            r2=createRole(count-1,"平民");
         }
         if(count>=6&&count<9){
             r1=createRole(2,"杀手");
-            r2=createRole(count-2,"水民");
+            r2=createRole(count-2,"平民");
         }
         if(count>=9&&count<12){
             r1=createRole(3,"杀手");
-            r2=createRole(count-3,"水民");
+            r2=createRole(count-3,"平民");
         }
         if(count>=12&&count<16){
             r1=createRole(4,"杀手");
-            r2=createRole(count-4,"水民");
+            r2=createRole(count-4,"平民");
         }
         if(count>=16&&count<19){
             r1=createRole(5,"杀手");
-            r2=createRole(count-5,"水民");
+            r2=createRole(count-5,"平民");
         }
         arr=r1.concat(r2);
-        shuffle(arr);
-        for(var j=0;j<arr.length;j++){
-            sessionStorage.setItem(j,arr[j]);
+
+        var finalorder=shuffle(arr);
+        for(var j=0;j<finalorder.length;j++){
+            localStorage.setItem(j,finalorder[j]);
         }
-        addRole2Panel(arr,count);
+        addRole2Panel(finalorder,count);
     }
 }
 function addRole2Panel(arr,count) {
@@ -243,15 +250,30 @@ function createElement(arr,index,color) {
 function initalPanel() {
     var count=getItembyID("players").value;
     var r1=createRole(1,"杀手");
-    var r2=createRole(count-1,"水民");
+    var r2=createRole(count-1,"平民");
     var intialarr=r1.concat(r2);
     shuffle(intialarr);
     for(var j=0;j<intialarr.length;j++){
-        sessionStorage.setItem(j,intialarr[j]);
+        localStorage.setItem(j,intialarr[j]);
     }
     addRole2Panel(intialarr,count);
 }
-addLoadEvent(initalPanel);
+
+function setname1() {
+    var setname1=getItembyID("setname1");
+    setname1.oninput=function () {
+        localStorage.setItem("setname1",setname1.value);
+    }
+}
+function setname2() {
+    var setname2=getItembyID("setname2");
+    setname2.oninput=function () {
+        localStorage.setItem("setname2",setname2.value);
+    }
+
+}
+addLoadEvent(setname1);
+addLoadEvent(setname2);
 addLoadEvent(setClick);
 addLoadEvent(adddition);
 addLoadEvent(substraction);

@@ -11,10 +11,11 @@
     display: -webkit-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /*实现容器内容垂直居中*/
+    justify-content:center;  /*实现容器内容垂直居中*/
     align-items: center; /* 实现容器内的内容水平居中*/
     border:4px solid;
-    /*height: 80%;*/
+    color:white;
+    background-color: #ffedc5;
 }
 .showRole{
     height: 10%;
@@ -32,18 +33,25 @@
     flex-direction: row;
     justify-content: center;  /*实现容器内容垂直居中*/
     align-items: center; /* 实现容器内的内容水平居中*/
-    display: block;
-    font-size: 2.5rem;
+    margin-top: 12px;
+    line-height:35px;
+    font-size: 2rem;
     color:#29bde0;
-    display: none;
 }
 .roleuncover{
+    margin-top: 50px;
+    height:130px;
+    width:130px;
     display: none;
 }
 
-.shift{
-    color:white;
-    background-color: #ffedc5;
+.tips{
+    width: 100%;
+    padding-left: 10px;
+    line-height: 30px;
+    font-size: 16px;
+    color:#fab344;
+    border-top:2px solid white;
 }
 .showRole{
     background-color: #29bde0;
