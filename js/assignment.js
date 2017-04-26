@@ -180,6 +180,7 @@ function deal() {
     }
 }
 function shuffleRole() {
+
     var count=getItembyID("players").value;
     if(!checkNumber(count)||count>18||count<4){
         Showbo.Msg.confirm("请输入4-18之间的整数。");
@@ -326,6 +327,11 @@ function Card(id,role,status,bgColor) {
     //
     // }
 }
+function assignPageload() {
+    sessionStorage.clear();
+    localStorage.clear();
+}
+addLoadEvent(assignPageload);
 addLoadEvent(setname1);
 addLoadEvent(setname2);
 addLoadEvent(setClick);

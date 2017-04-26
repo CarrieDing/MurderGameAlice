@@ -2,13 +2,14 @@
     background-color: #29bde0;
 }
 .judgeContent {
+    height: calc(80% - 2.5rem);
     background-color: #29bde0;
 }
 /*以下是法官日至页面样式*/
 
 
 .elementboard{
-    /*margin-top: 20px;*/
+    margin-top: 20px;
     margin-left: calc((100vmin - 80px*3)/4);
 float: left;
     display: flex;
@@ -49,8 +50,25 @@ justify-content: center;
     align-items: center;
 background-color: #f5c97b;
 }
-
-
+.promtPop{
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 15px;
+    height:2.5rem;
+    background-color: #b9e9f5;
+}
+.promtmessage{
+color:white;
+    text-indent: 100px;
+   padding-top: 10px;
+    letter-spacing: 2px;
+}
+.sound{
+    position: absolute;
+    /*display: inline;*/
+    padding-top: .5rem;
+    right: 1.8rem;
+}
 .rolenumber{
     flex: 1;
     height:20px;
@@ -62,3 +80,4 @@ background-color: #f5c97b;
     align-items: center;
 
 }
+

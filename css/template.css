@@ -35,6 +35,7 @@ html,body{
 .content{
     height: 80%;
     overflow-y: auto;
+
 }
 .footer{
     height: 10%;

@@ -92,10 +92,18 @@ function pageOnload() {
         if(fromBtn_=="killAction"){
             var pagetitle=getItembyID("pagetitle");
             pagetitle.innerHTML="杀手杀人";
+            var promtPop=getItembyID("promtPop");
+            promtPop.innerHTML="狙击手请睁眼，（狙击手告诉法官是否开枪）狙击手请选择要杀的对象<img class='sound' src='images/sound.png' /><span id='triangle-left' class='triangle-bottom'> </span>";
+            var promtmessage=getItembyID("promtmessage");
+            promtmessage.innerHTML="点击下方玩家头像，对被狙击的对象进行标记";
         }
         if(fromBtn_=="voteAction"){
             var pagetitle=getItembyID("pagetitle");
             pagetitle.innerHTML="全民投票";
+            var promtPop=getItembyID("promtPop");
+            promtPop.innerHTML="发言讨论结束，请大家投票<img class='sound' src='images/sound.png' /><span id='triangle-left' class='triangle-bottom'> </span>";
+            var promtmessage=getItembyID("promtmessage");
+            promtmessage.innerHTML="点击得票数最多人的头像";
         }
         if(fromBtn_=="judgelog"){
             var pagetitle=getItembyID("pagetitle");
