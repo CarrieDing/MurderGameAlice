@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017/4/20.
- */
 function judgeLogger() {
     var board=getItembyID("boardpanel");
     for(var t=0;t<localStorage.length-2;t++){
@@ -24,5 +21,12 @@ function backRole() {
     }
 
 }
+function startGame() {
+    var startGame=getItembyID("startGame");
+    startGame.onclick=function () {
+        pageJump("judgebook.html");
+    }
+}
 addLoadEvent(judgeLogger);
 addLoadEvent(backRole);
+addLoadEvent(startGame);

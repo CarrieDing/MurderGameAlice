@@ -16,7 +16,7 @@ a{color:#333;text-decoration:none;}
 #dvMsgBox .top .right .title{height:100%;line-height:40px;color:#fff;vertical-align:middle;font-size:14px;overflow:hidden;}  
 #dvMsgBox .body{background:#fff;padding-left:10px;}  
 #dvMsgBox .body .right{background:#fff;padding-right:2px;}  
-#dvMsgBox .body .right .ct{  line-height: 60px;
+#dvMsgBox .body .right .ct{  line-height: 30px;
   vertical-align: middle;
   width: 100%;
   text-align: center;

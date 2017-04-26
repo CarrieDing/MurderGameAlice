@@ -1,0 +1,118 @@
+.judgeFoot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #29bde0;
+}
+.judgebookContent {
+    color:#24a7c6;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+}
+
+.btnHalf{
+
+    width: 30%;
+    height:80%;
+    border:none;
+    outline: none;
+    background-color:#fbb435;
+    font-size: 24px;
+    color:white;
+    border-radius: 5px;
+}
+.days{
+    margin :20px auto;
+
+    width: 98%;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    background-color: #f7f7f7;
+    border:1px solid #c9c9c9;
+}
+.gamepanel{
+    position: relative;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    margin :0 auto;
+    height: 20rem;
+    width: 98%;
+    border: 1px solid #c9c9c9;
+    background-color: #f7f7f7;
+}
+.gameOrder{
+    /*flex: 2;*/
+    margin :0 auto;
+    text-align: center;
+    background-color: #f7f7f7;
+    /*border:1px solid #c9c9c9;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+}
+.flag{
+    position: absolute;
+    width: 1.2rem;
+    /*flex:.3;*/
+    background-color: #f7f7f7;
+    border-right: 2px solid #c9c9c9;
+    height:100%;
+}
+.moon{
+    position: absolute;
+    top:6%;
+    left:1%;
+    width:35px;
+    height:35px;
+}
+.sun{
+    position: absolute;
+    top:36%;
+    left:1%;
+    width:35px;
+    height:35px;
+}
+.bthOrder{
+    position: relative;
+    line-height: 50px;
+    margin: 15px 60px;
+    text-align: center;
+    width:86%;
+    height:50px;
+    background-color:#24a7c6;
+    text-decoration: none;
+    text-align: center;
+}
+.bthOrder a{
+    color:white;
+    font-size: 1rem;
+}
+/*@media screen and (width:667px) {*/
+    /*.bthOrder{*/
+        /*position: relative;*/
+        /*line-height: 50px;*/
+        /*margin: 15px 60px;*/
+        /*text-align: center;*/
+        /*width:280px;*/
+        /*height:50px;*/
+        /*background-color:#24a7c6;*/
+        /*text-decoration: none;*/
+        /*text-align: center;*/
+    /*}*/
+/*}*/
+@media screen and (min-width:360px) and (max-width:627px) {
+    .bthOrder{
+        position: relative;
+        line-height: 50px;
+        margin: 15px 60px;
+        text-align: center;
+        width:73%;
+        height:50px;
+        background-color:#24a7c6;
+        text-decoration: none;
+        text-align: center;
+    }
+}

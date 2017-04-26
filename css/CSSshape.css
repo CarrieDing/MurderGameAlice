@@ -3,6 +3,90 @@
     margin: 0;
 }
 
+
+.triangle-left1 {
+    position: absolute;
+    left:-15px;
+    top:15px;
+    width: 0; height: 0;
+    border-top: 10px solid transparent;
+    border-right: 25px solid #24a7c6;
+    border-bottom: 10px solid transparent;
+}
+.triangle-left2 {
+
+    position: absolute;
+    left:-15px;
+    top:15px;
+    width: 0; height: 0;
+    border-top: 10px solid transparent;
+    border-right: 25px solid #24a7c6;
+    border-bottom: 10px solid transparent;
+}
+.triangle-left3 {
+
+    position: absolute;
+    left:-15px;
+    top:15px;
+    width: 0; height: 0;
+    border-top: 10px solid transparent;
+    border-right: 25px solid #24a7c6;
+    border-bottom: 10px solid transparent;
+}
+.triangle-left4 {
+
+    position: absolute;
+    left:-15px;
+    top:15px;
+    width: 0; height: 0;
+    border-top: 10px solid transparent;
+    border-right: 25px solid #24a7c6;
+    border-bottom: 10px solid transparent;
+}
+
+/*@media screen and (height:667px) {*/
+    /*.triangle-left1 {*/
+        /*position: absolute;*/
+        /*left:-15px;*/
+        /*top:15px;*/
+        /*width: 0; height: 0;*/
+        /*border-top: 10px solid transparent;*/
+        /*border-right: 25px solid #24a7c6;*/
+        /*border-bottom: 10px solid transparent;*/
+    /*}*/
+    /*.triangle-left2 {*/
+
+        /*position: absolute;*/
+        /*left:-15px;*/
+        /*top:15px;*/
+        /*width: 0; height: 0;*/
+        /*border-top: 10px solid transparent;*/
+        /*border-right: 25px solid #24a7c6;*/
+        /*border-bottom: 10px solid transparent;*/
+    /*}*/
+    /*.triangle-left3 {*/
+
+        /*position: absolute;*/
+        /*left:-15px;*/
+        /*top:15px;*/
+        /*width: 0; height: 0;*/
+        /*border-top: 10px solid transparent;*/
+        /*border-right: 25px solid #24a7c6;*/
+        /*border-bottom: 10px solid transparent;*/
+    /*}*/
+    /*.triangle-left4 {*/
+
+        /*position: absolute;*/
+        /*left:-15px;*/
+        /*top:15px;*/
+        /*width: 0; height: 0;*/
+        /*border-top: 10px solid transparent;*/
+        /*border-right: 25px solid #24a7c6;*/
+        /*border-bottom: 10px solid transparent;*/
+    /*}*/
+
+/*}*/
+
     /*以下形状由于特殊性 所有属性就都刚在这一个文件中*/
     .angelleft {
         position: absolute;

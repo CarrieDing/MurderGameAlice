@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" charset="UTF-8">
+    <!-- viewport用于移动端屏幕的适应以及缩放-->
+    <title>玩家配比</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/CSSshape.css" rel="stylesheet">
+    <link href="css/result.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+<div id="backAssign" class="leftArrow">
+    <img class="imagesize" src="images/home.png" />
+</div>
+<!--<span id="returnChooseVersion" class="removeicon"></span>-->
+
+<div class="header">游戏结果<img class="help" src="images/ask.png"/></div>
+<div class="content resultPanel">
+    <p class="item1" id="winner" >
+        <!--<img class="cupStyle" src="images/cup.png" />-->
+    </p>
+    <p id="conclude" class="conclude"></p>
+    <div class="item2">
+        <p id="totalTime"></p>
+        <p class="leaves">剩余玩家：</p>
+        <p id="tongji" class="tongji"></p>
+
+        <p id="farmword"></p>
+        <p id="killerword"></p>
+    </div>
+
+
+    <div id="item3" class="item3">
+
+    </div>
+</div>
+<div class="footer roleFoot">
+    <input type="button" id="gameAgain" class="btnAction btnHalf1" value="再来一次" />
+    <input type="button" id="uploadshare" class="btnAction btnHalf2" value="上传并分享" />
+</div>
+
+</div>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/result.js"></script>
+<script type="text/javascript" src="js/showBo.js"></script>
+</body>
+</html>

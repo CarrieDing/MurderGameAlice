@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" charset="UTF-8">
+    <title>法官台本</title>
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/CSSshape.css" rel="stylesheet">
+    <link href="css/judgebook.css" rel="stylesheet">
+    <link href="css/showBo.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+<div id="backJudge" class="leftArrow">
+    <div class="left1"></div>
+    <div class="left2"></div>
+</div>
+    <span id="returnChooseVersion" class="removeicon"></span>
+
+<div class="header">法官日志</div>
+<div class="content judgebookContent" id="content">
+    <div id="addays">
+        <div id="1" class="days">第一天</div>
+    </div>
+    <div class="gamepanel">
+        <div class="flag">
+            <img class="moon" src="images/night.png"/>
+            <img class="sun" src="images/day.png"/>
+        </div>
+        <div  class="gameOrder">
+            <div id="killAction" class="bthOrder">
+                <span id="triangle-left1" class="triangle-left1"></span><a>杀手杀人</a>
+            </div>
+            <p id="killInfo"></p>
+            <div id="lastWords" class="bthOrder">
+                <span id="triangle-left2" class="triangle-left2"></span>
+                <a>亡灵发表遗言</a>
+            </div>
+            <div  id="discuss" class="bthOrder">
+                <span id="triangle-left3" class="triangle-left3"></span>
+                <a>玩家依次发言</a>
+            </div>
+            <div  id="voteAction" class="bthOrder">
+                <span id="triangle-left4" class="triangle-left4"> </span>
+                <a>全民投票</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer judgeFoot">
+    <input type="button" id="stopGame" class="btnAction btnHalf" value="结束游戏" />
+    <input type="button" id="judgelog" class="btnAction btnHalf" value="法官日志" />
+</div>
+</div>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/judgebook.js"></script>
+<script type="text/javascript" src="js/showBo.js"></script>
+</body>
+</html>

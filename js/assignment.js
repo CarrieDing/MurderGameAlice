@@ -186,6 +186,7 @@ function shuffleRole() {
     }else{
         var r1,r2;
         if(count>=4&&count<6){
+            // r1=new Card(1,"杀手","alive","#f5c97b")
             r1=createRole(1,"杀手");
             r2=createRole(count-1,"平民");
         }
@@ -209,30 +210,31 @@ function shuffleRole() {
 
         var finalorder=shuffle(arr);
         for(var j=0;j<finalorder.length;j++){
-            localStorage.setItem(j,finalorder[j]);
+            var tmp=JSON.stringify(finalorder[j]);
+            localStorage.setItem(j+1,tmp);
         }
+        localStorage.setItem("killAction","#24a7c6");
+        localStorage.setItem("lastWords","#24a7c6");
+        localStorage.setItem("discuss","#24a7c6");
+        localStorage.setItem("voteAction","#24a7c6");
+        // localStorage.setItem("nthDay",1);
         addRole2Panel(finalorder,count);
     }
 }
+// var finalorder;
 function addRole2Panel(arr,count) {
     var colm1=getItembyID("colm1");
     var colm2=getItembyID("colm2");
     for(var t=0;t<Math.ceil(count/2);t++){
-        if(arr[t]=="平民"){colm1.appendChild(createElement(arr,t,"#69d1e9"));}
-        else{colm1.appendChild(createElement(arr,t,"#fbb435"));}
+        if(arr[t].role=="平民"){colm1.appendChild(createElement(arr[t],t,"#69d1e9"));}
+        else{colm1.appendChild(createElement(arr[t],t,"#fbb435"));}
     }
     for(var k=Math.ceil(count/2);k<count;k++){
-        if(arr[k]=="平民"){colm2.appendChild(createElement(arr,k,"#69d1e9"));}
-        else{colm2.appendChild(createElement(arr,k,"#fbb435"));}
+        if(arr[k].role=="平民"){colm2.appendChild(createElement(arr[k],k,"#69d1e9"));}
+        else{colm2.appendChild(createElement(arr[k],k,"#fbb435"));}
     }
 }
-function createRole(num,role){
-    var arr=Array(num);
-    for(var i=0;i<num;i++)
-        arr[i]=role;
-    return arr;
-}
-function createElement(arr,index,color) {
+function createElement(addcard,index,color) {
     var para=document.createElement("p");
     para.style.marginBottom="10px";
     var txt=document.createElement("span");
@@ -242,11 +244,52 @@ function createElement(arr,index,color) {
     txt.style.background=color;
     txt.style.marginRight="10px";
     para.appendChild(txt);
-    var str=arr[index]+"1人";
+    var str=addcard.role+"1人";
     var rolename=document.createTextNode(str);
     para.appendChild(rolename);
     return para;
 }
+// function addRole2Panel(arr,count) {
+//     var colm1=getItembyID("colm1");
+//     var colm2=getItembyID("colm2");
+//     for(var t=0;t<Math.ceil(count/2);t++){
+//         if(arr[t]=="平民"){colm1.appendChild(createElement(arr,t,"#69d1e9"));}
+//         else{colm1.appendChild(createElement(arr,t,"#fbb435"));}
+//     }
+//     for(var k=Math.ceil(count/2);k<count;k++){
+//         if(arr[k]=="平民"){colm2.appendChild(createElement(arr,k,"#69d1e9"));}
+//         else{colm2.appendChild(createElement(arr,k,"#fbb435"));}
+//     }
+// }
+function createRole(num,role){
+    var arr=[];
+    for(var i=0;i<num;i++){
+        // var newcard=new Card(i+1,role,"alive","#f5c97b");
+        arr.push(new Card(i+1,role,"alive","#f5c97b"));
+    }
+    return arr;
+}
+// function createRole(num,role){
+//     var arr=Array(num);
+//     for(var i=0;i<num;i++)
+//         arr[i]=role;
+//     return arr;
+// }
+// function createElement(arr,index,color) {
+//     var para=document.createElement("p");
+//     para.style.marginBottom="10px";
+//     var txt=document.createElement("span");
+//     txt.style.width="6px";
+//     txt.style.height="6px";
+//     txt.style.display="inline-block";
+//     txt.style.background=color;
+//     txt.style.marginRight="10px";
+//     para.appendChild(txt);
+//     var str=arr[index]+"1人";
+//     var rolename=document.createTextNode(str);
+//     para.appendChild(rolename);
+//     return para;
+// }
 function initalPanel() {
     var count=getItembyID("players").value;
     var r1=createRole(1,"杀手");
@@ -262,15 +305,26 @@ function initalPanel() {
 function setname1() {
     var setname1=getItembyID("setname1");
     setname1.oninput=function () {
-        localStorage.setItem("setname1",setname1.value);
+        localStorage.setItem("平民词组",setname1.value);
     }
 }
 function setname2() {
     var setname2=getItembyID("setname2");
     setname2.oninput=function () {
-        localStorage.setItem("setname2",setname2.value);
+        localStorage.setItem("杀手词组",setname2.value);
     }
 
+}
+
+
+function Card(id,role,status,bgColor) {
+    this.id=id;
+    this.role=role;
+    this.status=status;
+    this.bgColor=bgColor;
+    // this.showCard=function () {
+    //
+    // }
 }
 addLoadEvent(setname1);
 addLoadEvent(setname2);

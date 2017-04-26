@@ -29,7 +29,7 @@ function checkRole() {
     checkRole.onclick=function () {
 
         var passRole=getItembyID("passRole");
-        if(i>localStorage.length-4){
+        if(i>localStorage.length-8){
             passRole.value="法官查看";
             hideItem("flop");
             showItem("roleuncover");
@@ -47,10 +47,12 @@ function checkRole() {
         showItem("passRole");
 
         var rolenameshow=getItembyID("rolenameshow");
-        if(localStorage.getItem(i-1)=="杀手"){
-            rolenameshow.innerHTML= "角色："+localStorage.getItem(i-1)+"<br />"+"<span style='color:#f56b81'>词组："+localStorage.getItem("setname2")+"</span>";
+        var getRole=JSON.parse(localStorage.getItem(i));
+        if(getRole.role=="杀手"){
+            rolenameshow.innerHTML= "角色："+getRole.role+"<br />"+"<span style='color:#f56b81'>词组："+localStorage.getItem("杀手词组")+"</span>";
+            // rolenameshow.innerHTML= "角色："+localStorage.getItem(i-1)+"<br />"+"<span style='color:#f56b81'>词组："+localStorage.getItem("setname2")+"</span>";
         }else{
-            rolenameshow.innerHTML= "角色："+localStorage.getItem(i-1)+"<br />"+"<span style='color:#f56b81'>词组："+localStorage.getItem("setname1")+"</span>";
+            rolenameshow.innerHTML= "角色："+getRole.role+"<br />"+"<span style='color:#f56b81'>词组："+localStorage.getItem("平民词组")+"</span>";
         }
 
         showItem("rolenameshow");
@@ -61,7 +63,7 @@ function passRole() {
     var checkRole=getItembyID("checkRole");
     passRole.onclick = function () {
         if(passRole.value=="法官查看"){
-            pageJump("judgelogger.html");
+            pageJump("judge.html");
         }else{
             hideItem("passRole");
             hideItem("roleuncover");

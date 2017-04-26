@@ -4,3 +4,59 @@
 .judgeContent {
     background-color: #29bde0;
 }
+/*以下是法官日至页面样式*/
+.header{
+    height: calc(10% - 1px);
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28px;
+    color:white;
+    border-bottom: 1px solid #74d4eb;
+    background-color:#29bde0 ;
+}
+
+
+.content{
+    height: 80%;
+    overflow-y: auto;
+}
+
+.frame{
+    float: left;
+    margin-left: calc((100vmin - 88px*3)/4);
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+    border:4px solid white;
+    display: flex;
+    flex-direction: column;
+}
+.rolename{
+    flex:4;
+    color: transparent;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/cover.png") 50%;
+    background-size: cover;
+}
+.rolename:hover {
+    color: black;
+    background:none ;
+}
+
+.rolenumber{
+    flex: 1;
+    height:20px;
+    width: 100%;
+    /*background-color: #83b09a;*/
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/footcover.png");
+    background-size: cover;
+}
