@@ -70,7 +70,7 @@
 }
 .sun{
     position: absolute;
-    top:36%;
+    top:28%;
     left:1%;
     width:35px;
     height:35px;
@@ -103,16 +103,16 @@
         /*text-align: center;*/
     /*}*/
 /*}*/
-@media screen and (min-width:360px) and (max-width:627px) {
-    .bthOrder{
-        position: relative;
-        line-height: 50px;
-        margin: 15px 60px;
-        text-align: center;
-        width:73%;
-        height:50px;
-        background-color:#24a7c6;
-        text-decoration: none;
-        text-align: center;
-    }
-}
+/*@media screen and (min-width:360px) and (max-width:627px) {*/
+    /*.bthOrder{*/
+        /*position: relative;*/
+        /*line-height: 50px;*/
+        /*margin: 15px 60px;*/
+        /*text-align: center;*/
+        /*width:73%;*/
+        /*height:50px;*/
+        /*background-color:#24a7c6;*/
+        /*text-decoration: none;*/
+        /*text-align: center;*/
+    /*}*/
+/*}*/
