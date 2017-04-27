@@ -74,6 +74,7 @@
     width: 100%;
     background-color: white;
     border:1px solid #adadad
+
 }
 
 .logstyle{
@@ -89,7 +90,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #99dff0;
+    /*background-color: #99dff0;*/
+    /*opacity: 0.5;*/
+    background-color: rgba(153, 223, 240, 0.5);
+
 }
 .btnHalf1{
 

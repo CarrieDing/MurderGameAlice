@@ -21,6 +21,12 @@ function judgeLogger() {
         var knife=document.createElement("img");
         knife.setAttribute("src","images/knife.png");
         knife.setAttribute("class","knife");
+
+        var voteImages=document.createElement("img");
+        voteImages.setAttribute("src","images/voteimage.png");
+        voteImages.setAttribute("class","voteImages");
+        voteImages.setAttribute("id","voteImages");
+        element.appendChild(voteImages);
         element.appendChild(knife);
         board.appendChild(element);
     }
@@ -93,7 +99,7 @@ function pageOnload() {
             var pagetitle=getItembyID("pagetitle");
             pagetitle.innerHTML="杀手杀人";
             var promtPop=getItembyID("promtPop");
-            promtPop.innerHTML="狙击手请睁眼，（狙击手告诉法官是否开枪）狙击手请选择要杀的对象<img class='sound' src='images/sound.png' /><span id='triangle-left' class='triangle-bottom'> </span>";
+            promtPop.innerHTML="狙击手请睁眼，（狙击手告诉法官是否开枪）狙击手请选择要杀的对象<span id='triangle-left' class='triangle-bottom'> </span>";
             var promtmessage=getItembyID("promtmessage");
             promtmessage.innerHTML="点击下方玩家头像，对被狙击的对象进行标记";
         }
@@ -101,9 +107,12 @@ function pageOnload() {
             var pagetitle=getItembyID("pagetitle");
             pagetitle.innerHTML="全民投票";
             var promtPop=getItembyID("promtPop");
-            promtPop.innerHTML="发言讨论结束，请大家投票<img class='sound' src='images/sound.png' /><span id='triangle-left' class='triangle-bottom'> </span>";
+            promtPop.innerHTML="发言讨论结束，请大家投票<span id='triangle-left' class='triangle-bottom'> </span>";
+
             var promtmessage=getItembyID("promtmessage");
             promtmessage.innerHTML="点击得票数最多人的头像";
+            var soundshow=getItembyID("playAudio");
+            soundshow.style.display="block";
         }
         if(fromBtn_=="judgelog"){
             var pagetitle=getItembyID("pagetitle");
@@ -126,7 +135,41 @@ function backJudgeBook() {
         pageJump("judgebook.html");
     }
 }
+
+function playAudio() {
+    var myaudio=getItembyID("freeMP3");
+    var playbtn=getItembyID("playAudio");
+    playbtn.onclick=function () {
+        if(myaudio.paused)
+            myaudio.play();
+        else
+            myaudio.pause();
+    }
+}
+
+function showVoteImages() {
+    var killSure=document.getElementById("killSure");
+    if(killSure.value=="返回"){}else{
+        if(!document.getElementsByClassName("elementboard")) return false;
+        var hoverDiv=document.getElementsByClassName("elementboard");
+        for(var i=0;i<localStorage.length-6;i++) {
+            hoverDiv[i].onmouseover=function (e) {
+                var e=e||window.event;
+                var target1=e.target||e.srcElement;
+                var voteImages=document.getElementsByClassName("voteImages");
+                for(var j=0;j<localStorage.length-6;j++){
+                    voteImages[j].style.visibility="hidden";
+                }
+                voteImages[target1.id-1].style.visibility="visible";
+            }
+        }
+    }
+
+}
+
 addLoadEvent(pageOnload)
+addLoadEvent(playAudio);
+addLoadEvent(showVoteImages);
 addLoadEvent(killSomebody);
 addLoadEvent(killSure)
 addLoadEvent(backJudgeBook);

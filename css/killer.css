@@ -9,11 +9,11 @@
 
 
 .elementboard{
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     margin-left: calc((100vmin - 80px*3)/4);
 float: left;
     display: flex;
-    height: 140px;
+    height: 150px;
     width: 80px;
     flex-direction: column;
 justify-content: center;
@@ -21,12 +21,12 @@ justify-content: center;
 }
 
 .knife{
-    margin-top: 10px;
+    margin-top: 8px;
     /*margin-bottom: 10px;*/
     display: block;
-    width: 30px;
-    height: 30px;
-    background-size: contain;
+    width: 20px;
+    height: 20px;
+    /*background-size: contain;*/
     visibility: hidden;
 
 }
@@ -56,19 +56,36 @@ background-color: #f5c97b;
     font-size: 15px;
     height:2.5rem;
     background-color: #b9e9f5;
+
 }
 .promtmessage{
 color:white;
     text-indent: 100px;
    padding-top: 10px;
+    padding-bottom: 20px;
     letter-spacing: 2px;
 }
 .sound{
     position: absolute;
     /*display: inline;*/
-    padding-top: .5rem;
+    margin-top: .4rem;
     right: 1.8rem;
+    width: 30px;
+    height: 30px;
+    border: none;
+   outline: none;
+    background: url("../images/sound.png") no-repeat;
+    background-size: cover;
+    display: none;
 }
+.voteImages{
+    visibility: hidden;
+    padding-top: 10px;
+    /*display: none;*/
+    width:80px;
+    height: 20px;
+}
+
 .rolenumber{
     flex: 1;
     height:20px;
